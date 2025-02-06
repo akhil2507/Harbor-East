@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HESymAddService", "HESymAddService\HESymAddService.csproj", "{C6FDB964-0CF0-4BA0-AC11-92CB0501198E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SymbolAddServiceSetup", "SymbolAddServiceSetup\SymbolAddServiceSetup.vdproj", "{0DB586AD-2E9A-48AE-9DEB-298BC767F84C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.0.11:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HESymAddService\\HESymAddService.csproj
+		SccProjectName1 = HESymAddService
+		SccLocalPath1 = HESymAddService
+		SccProjectUniqueName2 = SymbolAddServiceSetup\\SymbolAddServiceSetup.vdproj
+		SccProjectName2 = SymbolAddServiceSetup
+		SccLocalPath2 = SymbolAddServiceSetup
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6FDB964-0CF0-4BA0-AC11-92CB0501198E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FDB964-0CF0-4BA0-AC11-92CB0501198E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FDB964-0CF0-4BA0-AC11-92CB0501198E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FDB964-0CF0-4BA0-AC11-92CB0501198E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DB586AD-2E9A-48AE-9DEB-298BC767F84C}.Debug|Any CPU.ActiveCfg = Debug
+		{0DB586AD-2E9A-48AE-9DEB-298BC767F84C}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
