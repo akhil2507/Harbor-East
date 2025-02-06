@@ -1,0 +1,893 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Harbor_EastEntities">
+    <EntitySetMapping Name="AddressSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AddressSet1)">
+        <MappingFragment StoreEntitySet="AddressSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="AddressName" ColumnName="AddressName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AlertSet)">
+        <MappingFragment StoreEntitySet="AlertSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertShare">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AlertShare)">
+        <MappingFragment StoreEntitySet="AlertShare">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Allocation_Method" ColumnName="Allocation Method" />
+          <ScalarProperty Name="NewShare" ColumnName="NewShare" />
+          <ScalarProperty Name="OldShare" ColumnName="OldShare" />
+          <ScalarProperty Name="RotationDate" ColumnName="RotationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertStatusSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AlertStatusSet1)">
+        <MappingFragment StoreEntitySet="AlertStatusSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertSymbolState">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AlertSymbolState)">
+        <MappingFragment StoreEntitySet="AlertSymbolState">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="StateColor" ColumnName="StateColor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertTypeSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AlertTypeSet1)">
+        <MappingFragment StoreEntitySet="AlertTypeSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllocationEngineVariablesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AllocationEngineVariablesSet)">
+        <MappingFragment StoreEntitySet="AllocationEngineVariablesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SMArotatation" ColumnName="SMArotatation" />
+          <ScalarProperty Name="ReturnCash" ColumnName="ReturnCash" />
+          <ScalarProperty Name="WaitRotation" ColumnName="WaitRotation" />
+          <ScalarProperty Name="Hysteresis" ColumnName="Hysteresis" />
+          <ScalarProperty Name="BackStart" ColumnName="BackStart" />
+          <ScalarProperty Name="BackEnd" ColumnName="BackEnd" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="Aggressiveness" ColumnName="Aggressiveness" />
+          <ScalarProperty Name="MinCash" ColumnName="MinCash" />
+          <ScalarProperty Name="LoopThreshVal" ColumnName="LoopThreshVal" />
+          <ScalarProperty Name="WeightRotation" ColumnName="WeightRotation" />
+          <ScalarProperty Name="NomWeight" ColumnName="NomWeight" />
+          <ScalarProperty Name="TimeRebalance" ColumnName="TimeRebalance" />
+          <ScalarProperty Name="WeightBuyHold" ColumnName="WeightBuyHold" />
+          <ScalarProperty Name="LoopValMin" ColumnName="LoopValMin" />
+          <ScalarProperty Name="LoopValMax" ColumnName="LoopValMax" />
+          <ScalarProperty Name="LoopValIncrement" ColumnName="LoopValIncrement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetBackTestSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AssetBackTestSet)">
+        <MappingFragment StoreEntitySet="AssetBackTestSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Starting_Date" ColumnName="Starting Date" />
+          <ScalarProperty Name="Ending_Date" ColumnName="Ending Date" />
+          <ScalarProperty Name="Starting_Price" ColumnName="Starting Price" />
+          <ScalarProperty Name="Ending_Price" ColumnName="Ending Price" />
+          <ScalarProperty Name="AssetSymbol" ColumnName="AssetSymbol" />
+          <ScalarProperty Name="EndingPriceTrend" ColumnName="EndingPriceTrend" />
+          <ScalarProperty Name="CAGR" ColumnName="CAGR" />
+          <ScalarProperty Name="CAGRTrend" ColumnName="CAGRTrend" />
+          <ScalarProperty Name="Stdev" ColumnName="Stdev" />
+          <ScalarProperty Name="StdevTrend" ColumnName="StdevTrend" />
+          <ScalarProperty Name="Increase" ColumnName="Increase" />
+          <ScalarProperty Name="IncreaseTrend" ColumnName="IncreaseTrend" />
+          <ScalarProperty Name="DrawDown" ColumnName="DrawDown" />
+          <ScalarProperty Name="DrawdownTrend" ColumnName="DrawdownTrend" />
+          <ScalarProperty Name="CurrentState" ColumnName="CurrentState" />
+          <ScalarProperty Name="StateDate" ColumnName="StateDate" />
+          <ScalarProperty Name="MTBS" ColumnName="MTBS" />
+          <ScalarProperty Name="INT" ColumnName="INT" />
+          <ScalarProperty Name="Tbase" ColumnName="Tbase" />
+          <ScalarProperty Name="DividentSplit" ColumnName="DividentSplit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetMonitoring">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AssetMonitoring)">
+        <MappingFragment StoreEntitySet="AssetMonitoring">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetPriceBackTestSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AssetPriceBackTestSet)">
+        <MappingFragment StoreEntitySet="AssetPriceBackTestSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PriceTrend" ColumnName="PriceTrend" />
+          <ScalarProperty Name="MeanDeviation" ColumnName="MeanDeviation" />
+          <ScalarProperty Name="Growth" ColumnName="Growth" />
+          <ScalarProperty Name="Threshold" ColumnName="Threshold" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetPriceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AssetPriceSet)">
+        <MappingFragment StoreEntitySet="AssetPriceSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PriceTrend" ColumnName="PriceTrend" />
+          <ScalarProperty Name="MeanDeviation" ColumnName="MeanDeviation" />
+          <ScalarProperty Name="Growth" ColumnName="Growth" />
+          <ScalarProperty Name="Threshold" ColumnName="Threshold" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="FilterState" ColumnName="FilterState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AssetSet)">
+        <MappingFragment StoreEntitySet="AssetSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Starting_Date" ColumnName="Starting Date" />
+          <ScalarProperty Name="Ending_Date" ColumnName="Ending Date" />
+          <ScalarProperty Name="Starting_Price" ColumnName="Starting Price" />
+          <ScalarProperty Name="Ending_Price" ColumnName="Ending Price" />
+          <ScalarProperty Name="AssetSymbol" ColumnName="AssetSymbol" />
+          <ScalarProperty Name="EndingPriceTrend" ColumnName="EndingPriceTrend" />
+          <ScalarProperty Name="CAGR" ColumnName="CAGR" />
+          <ScalarProperty Name="CAGRTrend" ColumnName="CAGRTrend" />
+          <ScalarProperty Name="Stdev" ColumnName="Stdev" />
+          <ScalarProperty Name="StdevTrend" ColumnName="StdevTrend" />
+          <ScalarProperty Name="Increase" ColumnName="Increase" />
+          <ScalarProperty Name="IncreaseTrend" ColumnName="IncreaseTrend" />
+          <ScalarProperty Name="DrawDown" ColumnName="DrawDown" />
+          <ScalarProperty Name="DrawdownTrend" ColumnName="DrawdownTrend" />
+          <ScalarProperty Name="CurrentState" ColumnName="CurrentState" />
+          <ScalarProperty Name="StateDate" ColumnName="StateDate" />
+          <ScalarProperty Name="MTBS" ColumnName="MTBS" />
+          <ScalarProperty Name="INT" ColumnName="INT" />
+          <ScalarProperty Name="isWindowStable" ColumnName="isWindowStable" />
+          <ScalarProperty Name="Tbase" ColumnName="Tbase" />
+          <ScalarProperty Name="DividentSplit" ColumnName="DividentSplit" />
+          <ScalarProperty Name="StateColor" ColumnName="StateColor" />
+          <ScalarProperty Name="M" ColumnName="M" />
+          <ScalarProperty Name="A" ColumnName="A" />
+          <ScalarProperty Name="LoopUpdateDate" ColumnName="LoopUpdateDate" />
+          <ScalarProperty Name="Sample_Asset" ColumnName="Sample Asset" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetSymbolSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AssetSymbolSet)">
+        <MappingFragment StoreEntitySet="AssetSymbolSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoCorrectPriceData">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.AutoCorrectPriceData)">
+        <MappingFragment StoreEntitySet="AutoCorrectPriceData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateOfBadPrice" ColumnName="DateOfBadPrice" />
+          <ScalarProperty Name="DateOfCorrectPrice" ColumnName="DateOfCorrectPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeletePortfolio">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.DeletePortfolio)">
+        <MappingFragment StoreEntitySet="DeletePortfolio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonSetId" ColumnName="PersonSetId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="EndingDate" ColumnName="EndingDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ErrorAssets">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.ErrorAssets)">
+        <MappingFragment StoreEntitySet="ErrorAssets">
+          <ScalarProperty Name="AssetSymbolID" ColumnName="AssetSymbolID" />
+          <ScalarProperty Name="AssetSymbol" ColumnName="AssetSymbol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginDB">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.LoginDB)">
+        <MappingFragment StoreEntitySet="LoginDB">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoopUpdateInterval">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.LoopUpdateInterval)">
+        <MappingFragment StoreEntitySet="LoopUpdateInterval">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MembershipTypeSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.MembershipTypeSet1)">
+        <MappingFragment StoreEntitySet="MembershipTypeSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monthly_Statistics">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Monthly_Statistics)">
+        <MappingFragment StoreEntitySet="Monthly Statistics">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Total_Users" ColumnName="Total Users" />
+          <ScalarProperty Name="Level_1_Total_Users" ColumnName="Level 1 Total Users" />
+          <ScalarProperty Name="Level_2_Total_Users" ColumnName="Level 2 Total Users" />
+          <ScalarProperty Name="Level_3_Total_Users" ColumnName="Level 3 Total Users" />
+          <ScalarProperty Name="Total_Users_Log_On" ColumnName="Total Users Log On" />
+          <ScalarProperty Name="Total_Assets" ColumnName="Total Assets" />
+          <ScalarProperty Name="Percentage_of_Red_Assets" ColumnName="Percentage of Red Assets" />
+          <ScalarProperty Name="Percentage_of_Assets_TGPY_gt_GPY" ColumnName="Percentage of Assets TGPY gt GPY" />
+          <ScalarProperty Name="Percentage_of_Assets_P12M_TGPY_gt_GPY" ColumnName="Percentage of Assets P12M TGPY gt GPY" />
+          <ScalarProperty Name="Total_Portfolios" ColumnName="Total Portfolios" />
+          <ScalarProperty Name="Percentage_of_Portfolios_GTREB_gt_or_eq_REB" ColumnName="Percentage of Portfolios GTREB gt or eq REB" />
+          <ScalarProperty Name="Percentage_of_Portfolios_GRREB_gt_or_eq_TREB" ColumnName="Percentage of Portfolios GRREB gt or eq TREB" />
+          <ScalarProperty Name="Percentage_of_Portfolios_L12M_GTREB_gt_or_eq_REB" ColumnName="Percentage of Portfolios L12M GTREB gt or eq REB" />
+          <ScalarProperty Name="Percentage_of_Portfolios_L12M_GRREB_gt_or_eq_TREB" ColumnName="Percentage of Portfolios L12M GRREB gt or eq TREB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MostRecentRebalances">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.MostRecentRebalances)">
+        <MappingFragment StoreEntitySet="MostRecentRebalances">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Allocation_Method" ColumnName="Allocation Method" />
+          <ScalarProperty Name="OldShare" ColumnName="OldShare" />
+          <ScalarProperty Name="NewShare" ColumnName="NewShare" />
+          <ScalarProperty Name="RebalanceDate" ColumnName="RebalanceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewAssets">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.NewAssets)">
+        <MappingFragment StoreEntitySet="NewAssets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="ErrorDescription" ColumnName="ErrorDescription" />
+          <ScalarProperty Name="PersonSetId" ColumnName="PersonSetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PasswordChallengeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PasswordChallengeSet)">
+        <MappingFragment StoreEntitySet="PasswordChallengeSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="QuestionText" ColumnName="QuestionText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentInfoSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PaymentInfoSet1)">
+        <MappingFragment StoreEntitySet="PaymentInfoSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PersonSet)">
+        <MappingFragment StoreEntitySet="PersonSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="AlertsMessaging" ColumnName="AlertsMessaging" />
+          <ScalarProperty Name="BlockPortfolioCopy" ColumnName="BlockPortfolioCopy" />
+          <ScalarProperty Name="QuickViewPortfolio" ColumnName="QuickViewPortfolio" />
+          <ScalarProperty Name="Total_Logins" ColumnName="Total Logins" />
+          <ScalarProperty Name="AlertsPortfolioMessaging" ColumnName="AlertsPortfolioMessaging" />
+          <ScalarProperty Name="SubscriptionId" ColumnName="SubscriptionId" />
+          <ScalarProperty Name="SubscriptionStatus" ColumnName="SubscriptionStatus" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="FreeTrialStatus" ColumnName="FreeTrialStatus" />
+          <ScalarProperty Name="ComplementryAccountStatus" ColumnName="ComplementryAccountStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonSet_Customer">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PersonSet_Customer)">
+        <MappingFragment StoreEntitySet="PersonSet_Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonSet_FinancialAdvisor">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PersonSet_FinancialAdvisor)">
+        <MappingFragment StoreEntitySet="PersonSet_FinancialAdvisor">
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PorfolioAllocationInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PorfolioAllocationInfo)">
+        <MappingFragment StoreEntitySet="PorfolioAllocationInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Allocation_Method" ColumnName="Allocation Method" />
+          <ScalarProperty Name="Starting_Value" ColumnName="Starting Value" />
+          <ScalarProperty Name="Current_Value" ColumnName="Current Value" />
+          <ScalarProperty Name="Current_Weight" ColumnName="Current Weight" />
+          <ScalarProperty Name="Target_Weight" ColumnName="Target Weight" />
+          <ScalarProperty Name="Share_Price" ColumnName="Share Price" />
+          <ScalarProperty Name="CurrentSharePrice" ColumnName="CurrentSharePrice" />
+          <ScalarProperty Name="SharePriceTrend" ColumnName="SharePriceTrend" />
+          <ScalarProperty Name="CurrentShare" ColumnName="CurrentShare" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="RotationDate" ColumnName="RotationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortfolioContentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PortfolioContentSet)">
+        <MappingFragment StoreEntitySet="PortfolioContentSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="Udatedate" ColumnName="Udatedate" />
+          <ScalarProperty Name="Weighting" ColumnName="Weighting" />
+          <ScalarProperty Name="Stedev" ColumnName="Stedev" />
+          <ScalarProperty Name="Increase" ColumnName="Increase" />
+          <ScalarProperty Name="Drawdown" ColumnName="Drawdown" />
+          <ScalarProperty Name="Rebalance" ColumnName="Rebalance" />
+          <ScalarProperty Name="CAR" ColumnName="CAR" />
+          <ScalarProperty Name="MTBR" ColumnName="MTBR" />
+          <ScalarProperty Name="Invested" ColumnName="Invested" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DateStamp" ColumnName="DateStamp" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortfolioMethodSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PortfolioMethodSet)">
+        <MappingFragment StoreEntitySet="PortfolioMethodSet">
+          <ScalarProperty Name="Current_Value_BH" ColumnName="Current Value BH" />
+          <ScalarProperty Name="Current_Value_BHTrend" ColumnName="Current Value BHTrend" />
+          <ScalarProperty Name="Current_Value_Reb" ColumnName="Current Value Reb" />
+          <ScalarProperty Name="Current_Value_RebTrend" ColumnName="Current Value RebTrend" />
+          <ScalarProperty Name="Current_Value_BHRotation" ColumnName="Current Value BHRotation" />
+          <ScalarProperty Name="Current_Value_RebRotation" ColumnName="Current Value RebRotation" />
+          <ScalarProperty Name="Current_Value_RankRebRotaion" ColumnName="Current Value RankRebRotaion" />
+          <ScalarProperty Name="CAGR_BH" ColumnName="CAGR BH" />
+          <ScalarProperty Name="CAGR_BHTrend" ColumnName="CAGR BHTrend" />
+          <ScalarProperty Name="CAGR_Reb" ColumnName="CAGR Reb" />
+          <ScalarProperty Name="CAGR_RebTrend" ColumnName="CAGR RebTrend" />
+          <ScalarProperty Name="CAGR_BHRotation" ColumnName="CAGR BHRotation" />
+          <ScalarProperty Name="CAGR_RebRotation" ColumnName="CAGR RebRotation" />
+          <ScalarProperty Name="CAGR_RankRebRotation" ColumnName="CAGR RankRebRotation" />
+          <ScalarProperty Name="Increase_BH" ColumnName="Increase BH" />
+          <ScalarProperty Name="Increase_BHTrend" ColumnName="Increase BHTrend" />
+          <ScalarProperty Name="Increase_Reb" ColumnName="Increase Reb" />
+          <ScalarProperty Name="Increase_RebTrend" ColumnName="Increase RebTrend" />
+          <ScalarProperty Name="Increase_BHRotation" ColumnName="Increase BHRotation" />
+          <ScalarProperty Name="Increase_RebRotation" ColumnName="Increase RebRotation" />
+          <ScalarProperty Name="Increase_RankRebRotation" ColumnName="Increase RankRebRotation" />
+          <ScalarProperty Name="DrawDown_BH" ColumnName="DrawDown BH" />
+          <ScalarProperty Name="DrawDown_BHTrend" ColumnName="DrawDown BHTrend" />
+          <ScalarProperty Name="DrawDown_Reb" ColumnName="DrawDown Reb" />
+          <ScalarProperty Name="DrawDown_RebTrend" ColumnName="DrawDown RebTrend" />
+          <ScalarProperty Name="DrawDownBHRotation" ColumnName="DrawDownBHRotation" />
+          <ScalarProperty Name="DrawDownRebRotation" ColumnName="DrawDownRebRotation" />
+          <ScalarProperty Name="DrawDown_RankRebRotation" ColumnName="DrawDown RankRebRotation" />
+          <ScalarProperty Name="Stdev_BH" ColumnName="Stdev BH" />
+          <ScalarProperty Name="Stdev_BHTrend" ColumnName="Stdev BHTrend" />
+          <ScalarProperty Name="Stdev_Reb" ColumnName="Stdev Reb" />
+          <ScalarProperty Name="Stdev_RebTrend" ColumnName="Stdev RebTrend" />
+          <ScalarProperty Name="Stdev_BHRotation" ColumnName="Stdev BHRotation" />
+          <ScalarProperty Name="Stdev_RebRotation" ColumnName="Stdev RebRotation" />
+          <ScalarProperty Name="Stdev_RankRebRotation" ColumnName="Stdev RankRebRotation" />
+          <ScalarProperty Name="Rebalance_Date" ColumnName="Rebalance Date" />
+          <ScalarProperty Name="RebalancesPerYearAvg" ColumnName="RebalancesPerYearAvg" />
+          <ScalarProperty Name="MTBR" ColumnName="MTBR" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortfolioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PortfolioSet)">
+        <MappingFragment StoreEntitySet="PortfolioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Portfolio_Name" ColumnName="Portfolio Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Aggressiveness" ColumnName="Aggressiveness" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="Current_Date" ColumnName="Current Date" />
+          <ScalarProperty Name="Begin_Value" ColumnName="Begin Value" />
+          <ScalarProperty Name="IsProcessingCompleted" ColumnName="IsProcessingCompleted" />
+          <ScalarProperty Name="Sample_Portfolio" ColumnName="Sample Portfolio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortfoliosInProgress">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PortfoliosInProgress)">
+        <MappingFragment StoreEntitySet="PortfoliosInProgress">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PortfolioValueSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.PortfolioValueSet)">
+        <MappingFragment StoreEntitySet="PortfolioValueSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="BH" ColumnName="BH" />
+          <ScalarProperty Name="REB" ColumnName="REB" />
+          <ScalarProperty Name="TBH" ColumnName="TBH" />
+          <ScalarProperty Name="TREB" ColumnName="TREB" />
+          <ScalarProperty Name="RBH" ColumnName="RBH" />
+          <ScalarProperty Name="RREB" ColumnName="RREB" />
+          <ScalarProperty Name="RRR" ColumnName="RRR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RotationEnginePair">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.RotationEnginePair)">
+        <MappingFragment StoreEntitySet="RotationEnginePair">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SymbolPair" ColumnName="SymbolPair" />
+          <ScalarProperty Name="OptimalTbase" ColumnName="OptimalTbase" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RotationEngineVariableSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.RotationEngineVariableSet)">
+        <MappingFragment StoreEntitySet="RotationEngineVariableSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SMARotation" ColumnName="SMARotation" />
+          <ScalarProperty Name="WaitRotation" ColumnName="WaitRotation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RotationMatrixData">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.RotationMatrixData)">
+        <MappingFragment StoreEntitySet="RotationMatrixData">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="C1" ColumnName="C1" />
+          <ScalarProperty Name="C2" ColumnName="C2" />
+          <ScalarProperty Name="C3" ColumnName="C3" />
+          <ScalarProperty Name="C4" ColumnName="C4" />
+          <ScalarProperty Name="C5" ColumnName="C5" />
+          <ScalarProperty Name="C6" ColumnName="C6" />
+          <ScalarProperty Name="C7" ColumnName="C7" />
+          <ScalarProperty Name="C8" ColumnName="C8" />
+          <ScalarProperty Name="C9" ColumnName="C9" />
+          <ScalarProperty Name="C10" ColumnName="C10" />
+          <ScalarProperty Name="C11" ColumnName="C11" />
+          <ScalarProperty Name="C12" ColumnName="C12" />
+          <ScalarProperty Name="C13" ColumnName="C13" />
+          <ScalarProperty Name="C14" ColumnName="C14" />
+          <ScalarProperty Name="C15" ColumnName="C15" />
+          <ScalarProperty Name="C16" ColumnName="C16" />
+          <ScalarProperty Name="ColorC1" ColumnName="ColorC1" />
+          <ScalarProperty Name="ColorC2" ColumnName="ColorC2" />
+          <ScalarProperty Name="ColorC3" ColumnName="ColorC3" />
+          <ScalarProperty Name="ColorC4" ColumnName="ColorC4" />
+          <ScalarProperty Name="ColorC5" ColumnName="ColorC5" />
+          <ScalarProperty Name="ColorC6" ColumnName="ColorC6" />
+          <ScalarProperty Name="ColorC7" ColumnName="ColorC7" />
+          <ScalarProperty Name="ColorC8" ColumnName="ColorC8" />
+          <ScalarProperty Name="ColorC9" ColumnName="ColorC9" />
+          <ScalarProperty Name="ColorC10" ColumnName="ColorC10" />
+          <ScalarProperty Name="ColorC11" ColumnName="ColorC11" />
+          <ScalarProperty Name="ColorC12" ColumnName="ColorC12" />
+          <ScalarProperty Name="ColorC13" ColumnName="ColorC13" />
+          <ScalarProperty Name="ColorC14" ColumnName="ColorC14" />
+          <ScalarProperty Name="ColorC15" ColumnName="ColorC15" />
+          <ScalarProperty Name="ColorC16" ColumnName="ColorC16" />
+          <ScalarProperty Name="rowNo" ColumnName="rowNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SymbolLookup">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.SymbolLookup)">
+        <MappingFragment StoreEntitySet="SymbolLookup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.sysdiagrams)">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrendEngineVariablesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.TrendEngineVariablesSet)">
+        <MappingFragment StoreEntitySet="TrendEngineVariablesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SMATrend" ColumnName="SMATrend" />
+          <ScalarProperty Name="ReturnCash" ColumnName="ReturnCash" />
+          <ScalarProperty Name="WaitTrend" ColumnName="WaitTrend" />
+          <ScalarProperty Name="Hysteresis" ColumnName="Hysteresis" />
+          <ScalarProperty Name="ThresholdMin" ColumnName="ThresholdMin" />
+          <ScalarProperty Name="ThresholdtMax" ColumnName="ThresholdtMax" />
+          <ScalarProperty Name="ThresholdIncrement" ColumnName="ThresholdIncrement" />
+          <ScalarProperty Name="LoopValMin" ColumnName="LoopValMin" />
+          <ScalarProperty Name="LoopValMax" ColumnName="LoopValMax" />
+          <ScalarProperty Name="LoopValIncrement" ColumnName="LoopValIncrement" />
+          <ScalarProperty Name="YearTradingDays" ColumnName="YearTradingDays" />
+          <ScalarProperty Name="BackStart" ColumnName="BackStart" />
+          <ScalarProperty Name="BackEnd" ColumnName="BackEnd" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="IsDynamicWaitTrend" ColumnName="IsDynamicWaitTrend" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLevels">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.UserLevels)">
+        <MappingFragment StoreEntitySet="UserLevels">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="MaxMonitoredAssets" ColumnName="MaxMonitoredAssets" />
+          <ScalarProperty Name="MaxMonitoredPortfolio" ColumnName="MaxMonitoredPortfolio" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_PersonAddress" TypeName="Model.FK_PersonAddress" StoreEntitySet="AddressSet1">
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="AddressSet1">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AlertPerson" TypeName="Model.FK_AlertPerson" StoreEntitySet="AlertSet">
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="AlertSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AlertStatusAlert" TypeName="Model.FK_AlertStatusAlert" StoreEntitySet="AlertSet">
+      <EndProperty Name="AlertStatusSet1">
+        <ScalarProperty Name="Id" ColumnName="AlertStatus_Id" />
+      </EndProperty>
+      <EndProperty Name="AlertSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AlertTypeAlert" TypeName="Model.FK_AlertTypeAlert" StoreEntitySet="AlertSet">
+      <EndProperty Name="AlertTypeSet1">
+        <ScalarProperty Name="Id" ColumnName="AlertType_Id" />
+      </EndProperty>
+      <EndProperty Name="AlertSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AlertShare_AssetSymbolSet" TypeName="Model.FK_AlertShare_AssetSymbolSet" StoreEntitySet="AlertShare">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbolID" />
+      </EndProperty>
+      <EndProperty Name="AlertShare">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AlertShare_PortfolioSet" TypeName="Model.FK_AlertShare_PortfolioSet" StoreEntitySet="AlertShare">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="PortfolioID" />
+      </EndProperty>
+      <EndProperty Name="AlertShare">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="PortfolioID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AlertSymbolState_AssetSymbolSet" TypeName="Model.FK_AlertSymbolState_AssetSymbolSet" StoreEntitySet="AlertSymbolState">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbol_Id" />
+      </EndProperty>
+      <EndProperty Name="AlertSymbolState">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="AssetSymbol_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AllocationEngineVariablesPortfolio" TypeName="Model.FK_AllocationEngineVariablesPortfolio" StoreEntitySet="AllocationEngineVariablesSet">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="Portfolio_Id" />
+      </EndProperty>
+      <EndProperty Name="AllocationEngineVariablesSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AssetBackTestSet_AssetSymbolSet" TypeName="Model.FK_AssetBackTestSet_AssetSymbolSet" StoreEntitySet="AssetBackTestSet">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbol_Id" />
+      </EndProperty>
+      <EndProperty Name="AssetBackTestSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AssetBackTestSet_TrendEngineVariablesSet" TypeName="Model.FK_AssetBackTestSet_TrendEngineVariablesSet" StoreEntitySet="AssetBackTestSet">
+      <EndProperty Name="TrendEngineVariablesSet">
+        <ScalarProperty Name="Id" ColumnName="TrendEngineVariables_Id" />
+      </EndProperty>
+      <EndProperty Name="AssetBackTestSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AssetMonitoring_PersonSet" TypeName="Model.FK_AssetMonitoring_PersonSet" StoreEntitySet="AssetMonitoring">
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="PersonSetID" />
+      </EndProperty>
+      <EndProperty Name="AssetMonitoring">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="PersonSetID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_InstruementSymbolInstruementPrice1" TypeName="Model.FK_InstruementSymbolInstruementPrice1" StoreEntitySet="AssetPriceBackTestSet">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbol_Id" />
+      </EndProperty>
+      <EndProperty Name="AssetPriceBackTestSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_InstruementSymbolInstruementPrice" TypeName="Model.FK_InstruementSymbolInstruementPrice" StoreEntitySet="AssetPriceSet">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbol_Id" />
+      </EndProperty>
+      <EndProperty Name="AssetPriceSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AssetSymbolAsset" TypeName="Model.FK_AssetSymbolAsset" StoreEntitySet="AssetSet">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbol_Id" />
+      </EndProperty>
+      <EndProperty Name="AssetSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_TrendEngineVariablesFinancialInstrumentSet" TypeName="Model.FK_TrendEngineVariablesFinancialInstrumentSet" StoreEntitySet="AssetSet">
+      <EndProperty Name="TrendEngineVariablesSet">
+        <ScalarProperty Name="Id" ColumnName="TrendEngineVariables_Id" />
+      </EndProperty>
+      <EndProperty Name="AssetSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_AutoCorrectPriceData_AutoCorrectPriceData" TypeName="Model.FK_AutoCorrectPriceData_AutoCorrectPriceData" StoreEntitySet="AutoCorrectPriceData">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbolID" />
+      </EndProperty>
+      <EndProperty Name="AutoCorrectPriceData">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_InstruementSymbolPortfolioContent" TypeName="Model.FK_InstruementSymbolPortfolioContent" StoreEntitySet="PortfolioContentSet">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbol_Id" />
+      </EndProperty>
+      <EndProperty Name="PortfolioContentSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_MostRecentRebalances_AssetSymbolSet" TypeName="Model.FK_MostRecentRebalances_AssetSymbolSet" StoreEntitySet="MostRecentRebalances">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbolID" />
+      </EndProperty>
+      <EndProperty Name="MostRecentRebalances">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PorfolioAllocationInfo_AssetSymbolSet" TypeName="Model.FK_PorfolioAllocationInfo_AssetSymbolSet" StoreEntitySet="PorfolioAllocationInfo">
+      <EndProperty Name="AssetSymbolSet">
+        <ScalarProperty Name="Id" ColumnName="AssetSymbolID" />
+      </EndProperty>
+      <EndProperty Name="PorfolioAllocationInfo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="AssetSymbolID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_TrendEngineVariablesSet_LoopUpdateInterval" TypeName="Model.FK_TrendEngineVariablesSet_LoopUpdateInterval" StoreEntitySet="TrendEngineVariablesSet">
+      <EndProperty Name="LoopUpdateInterval">
+        <ScalarProperty Name="Id" ColumnName="LoopUpdateInterval" />
+      </EndProperty>
+      <EndProperty Name="TrendEngineVariablesSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_CustomerMembershipType" TypeName="Model.FK_CustomerMembershipType" StoreEntitySet="PersonSet_Customer">
+      <EndProperty Name="MembershipTypeSet1">
+        <ScalarProperty Name="Id" ColumnName="MembershipType_Id" />
+      </EndProperty>
+      <EndProperty Name="PersonSet_Customer">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_MostRecentRebalances_PortfolioSet" TypeName="Model.FK_MostRecentRebalances_PortfolioSet" StoreEntitySet="MostRecentRebalances">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="PortfolioID" />
+      </EndProperty>
+      <EndProperty Name="MostRecentRebalances">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="PortfolioID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PasswordChallengePerson" TypeName="Model.FK_PasswordChallengePerson" StoreEntitySet="PersonSet">
+      <EndProperty Name="PasswordChallengeSet">
+        <ScalarProperty Name="Id" ColumnName="PasswordChallenge_Id" />
+      </EndProperty>
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="PasswordChallenge_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PersonPaymentInfo" TypeName="Model.FK_PersonPaymentInfo" StoreEntitySet="PaymentInfoSet1">
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="PaymentInfoSet1">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Customer_inherits_Person" TypeName="Model.FK_Customer_inherits_Person" StoreEntitySet="PersonSet_Customer">
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <EndProperty Name="PersonSet_Customer">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_FinancialAdvisor_inherits_Person" TypeName="Model.FK_FinancialAdvisor_inherits_Person" StoreEntitySet="PersonSet_FinancialAdvisor">
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <EndProperty Name="PersonSet_FinancialAdvisor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PersonSet_UserLevels" TypeName="Model.FK_PersonSet_UserLevels" StoreEntitySet="PersonSet">
+      <EndProperty Name="UserLevels">
+        <ScalarProperty Name="ID" ColumnName="UserLevel_Id" />
+      </EndProperty>
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PortfolioSet_PersonSet" TypeName="Model.FK_PortfolioSet_PersonSet" StoreEntitySet="PortfolioSet">
+      <EndProperty Name="PersonSet">
+        <ScalarProperty Name="Id" ColumnName="PersonSetID" />
+      </EndProperty>
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="PersonSetID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_FinancialAdvisorCustomer" TypeName="Model.FK_FinancialAdvisorCustomer" StoreEntitySet="PersonSet_Customer">
+      <EndProperty Name="PersonSet_FinancialAdvisor">
+        <ScalarProperty Name="Id" ColumnName="FinancialAdvisor_Id" />
+      </EndProperty>
+      <EndProperty Name="PersonSet_Customer">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="FinancialAdvisor_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PorfolioAllocationInfo_PortfolioSet" TypeName="Model.FK_PorfolioAllocationInfo_PortfolioSet" StoreEntitySet="PorfolioAllocationInfo">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="PortfolioID" />
+      </EndProperty>
+      <EndProperty Name="PorfolioAllocationInfo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="PortfolioID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PortfolioPortfolioContents" TypeName="Model.FK_PortfolioPortfolioContents" StoreEntitySet="PortfolioContentSet">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="Portfolio_Id" />
+      </EndProperty>
+      <EndProperty Name="PortfolioContentSet">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PortfolioMethodSet_PortfolioSet" TypeName="Model.FK_PortfolioMethodSet_PortfolioSet" StoreEntitySet="PortfolioMethodSet">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="Portfolio_Id" />
+      </EndProperty>
+      <EndProperty Name="PortfolioMethodSet">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PortfolioValueSet_PortfolioSet" TypeName="Model.FK_PortfolioValueSet_PortfolioSet" StoreEntitySet="PortfolioValueSet">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="Portfolio_ID" />
+      </EndProperty>
+      <EndProperty Name="PortfolioValueSet">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_RotationEnginePair_PortfolioSet" TypeName="Model.FK_RotationEnginePair_PortfolioSet" StoreEntitySet="RotationEnginePair">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="PortfollioID" />
+      </EndProperty>
+      <EndProperty Name="RotationEnginePair">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="PortfollioID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_RotationMatrixData_PortfolioSet" TypeName="Model.FK_RotationMatrixData_PortfolioSet" StoreEntitySet="RotationMatrixData">
+      <EndProperty Name="PortfolioSet">
+        <ScalarProperty Name="Id" ColumnName="PortfolioID" />
+      </EndProperty>
+      <EndProperty Name="RotationMatrixData">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="PortfolioID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AssetAssetPrice" TypeName="Model.AssetAssetPrice" StoreEntitySet="AssetAssetPrice">
+      <EndProperty Name="AssetPriceSet">
+        <ScalarProperty Name="Id" ColumnName="AssetPrice_Id" />
+      </EndProperty>
+      <EndProperty Name="AssetSet">
+        <ScalarProperty Name="Id" ColumnName="Asset_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PortfolioContentsFinancialInstrument" TypeName="Model.FK_PortfolioContentsFinancialInstrument" StoreEntitySet="FK_PortfolioContentsFinancialInstrument">
+      <EndProperty Name="AssetSet">
+        <ScalarProperty Name="Id" ColumnName="Asset_Id" />
+      </EndProperty>
+      <EndProperty Name="PortfolioContentSet">
+        <ScalarProperty Name="Id" ColumnName="PortfolioContent_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

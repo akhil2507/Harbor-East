@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="AddressSet1" EntityType="Model.Store.AddressSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlertSet" EntityType="Model.Store.AlertSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlertShare" EntityType="Model.Store.AlertShare" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlertStatusSet1" EntityType="Model.Store.AlertStatusSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlertSymbolState" EntityType="Model.Store.AlertSymbolState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlertTypeSet1" EntityType="Model.Store.AlertTypeSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AllocationEngineVariablesSet" EntityType="Model.Store.AllocationEngineVariablesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetAssetPrice" EntityType="Model.Store.AssetAssetPrice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetBackTestSet" EntityType="Model.Store.AssetBackTestSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetMonitoring" EntityType="Model.Store.AssetMonitoring" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetPriceBackTestSet" EntityType="Model.Store.AssetPriceBackTestSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetPriceSet" EntityType="Model.Store.AssetPriceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetSet" EntityType="Model.Store.AssetSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssetSymbolSet" EntityType="Model.Store.AssetSymbolSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AutoCorrectPriceData" EntityType="Model.Store.AutoCorrectPriceData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DeletePortfolio" EntityType="Model.Store.DeletePortfolio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ErrorAssets" EntityType="Model.Store.ErrorAssets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FK_PortfolioContentsFinancialInstrument" EntityType="Model.Store.FK_PortfolioContentsFinancialInstrument" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoginDB" EntityType="Model.Store.LoginDB" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoopUpdateInterval" EntityType="Model.Store.LoopUpdateInterval" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MembershipTypeSet1" EntityType="Model.Store.MembershipTypeSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Monthly Statistics" EntityType="Model.Store.Monthly Statistics" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MostRecentRebalances" EntityType="Model.Store.MostRecentRebalances" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewAssets" EntityType="Model.Store.NewAssets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PasswordChallengeSet" EntityType="Model.Store.PasswordChallengeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PaymentInfoSet1" EntityType="Model.Store.PaymentInfoSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonSet" EntityType="Model.Store.PersonSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonSet_Customer" EntityType="Model.Store.PersonSet_Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonSet_FinancialAdvisor" EntityType="Model.Store.PersonSet_FinancialAdvisor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PorfolioAllocationInfo" EntityType="Model.Store.PorfolioAllocationInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PortfolioContentSet" EntityType="Model.Store.PortfolioContentSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PortfolioMethodSet" EntityType="Model.Store.PortfolioMethodSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PortfolioSet" EntityType="Model.Store.PortfolioSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PortfoliosInProgress" EntityType="Model.Store.PortfoliosInProgress" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PortfolioValueSet" EntityType="Model.Store.PortfolioValueSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RotationEnginePair" EntityType="Model.Store.RotationEnginePair" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RotationEngineVariableSet" EntityType="Model.Store.RotationEngineVariableSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RotationMatrixData" EntityType="Model.Store.RotationMatrixData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SymbolLookup" EntityType="Model.Store.SymbolLookup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TrendEngineVariablesSet" EntityType="Model.Store.TrendEngineVariablesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserLevels" EntityType="Model.Store.UserLevels" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AlertPerson" Association="Model.Store.FK_AlertPerson">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="AlertSet" EntitySet="AlertSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertShare_AssetSymbolSet" Association="Model.Store.FK_AlertShare_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AlertShare" EntitySet="AlertShare" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertShare_PortfolioSet" Association="Model.Store.FK_AlertShare_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="AlertShare" EntitySet="AlertShare" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertStatusAlert" Association="Model.Store.FK_AlertStatusAlert">
+      <End Role="AlertStatusSet1" EntitySet="AlertStatusSet1" />
+      <End Role="AlertSet" EntitySet="AlertSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertSymbolState_AssetSymbolSet" Association="Model.Store.FK_AlertSymbolState_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AlertSymbolState" EntitySet="AlertSymbolState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTypeAlert" Association="Model.Store.FK_AlertTypeAlert">
+      <End Role="AlertTypeSet1" EntitySet="AlertTypeSet1" />
+      <End Role="AlertSet" EntitySet="AlertSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AllocationEngineVariablesPortfolio" Association="Model.Store.FK_AllocationEngineVariablesPortfolio">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="AllocationEngineVariablesSet" EntitySet="AllocationEngineVariablesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetAssetPrice_AssetPriceSet" Association="Model.Store.FK_AssetAssetPrice_AssetPriceSet">
+      <End Role="AssetPriceSet" EntitySet="AssetPriceSet" />
+      <End Role="AssetAssetPrice" EntitySet="AssetAssetPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetAssetPrice_AssetSet" Association="Model.Store.FK_AssetAssetPrice_AssetSet">
+      <End Role="AssetSet" EntitySet="AssetSet" />
+      <End Role="AssetAssetPrice" EntitySet="AssetAssetPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetBackTestSet_AssetSymbolSet" Association="Model.Store.FK_AssetBackTestSet_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AssetBackTestSet" EntitySet="AssetBackTestSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetBackTestSet_TrendEngineVariablesSet" Association="Model.Store.FK_AssetBackTestSet_TrendEngineVariablesSet">
+      <End Role="TrendEngineVariablesSet" EntitySet="TrendEngineVariablesSet" />
+      <End Role="AssetBackTestSet" EntitySet="AssetBackTestSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetMonitoring_PersonSet" Association="Model.Store.FK_AssetMonitoring_PersonSet">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="AssetMonitoring" EntitySet="AssetMonitoring" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetSymbolAsset" Association="Model.Store.FK_AssetSymbolAsset">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AssetSet" EntitySet="AssetSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutoCorrectPriceData_AutoCorrectPriceData" Association="Model.Store.FK_AutoCorrectPriceData_AutoCorrectPriceData">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AutoCorrectPriceData" EntitySet="AutoCorrectPriceData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_inherits_Person" Association="Model.Store.FK_Customer_inherits_Person">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PersonSet_Customer" EntitySet="PersonSet_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerMembershipType" Association="Model.Store.FK_CustomerMembershipType">
+      <End Role="MembershipTypeSet1" EntitySet="MembershipTypeSet1" />
+      <End Role="PersonSet_Customer" EntitySet="PersonSet_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FinancialAdvisor_inherits_Person" Association="Model.Store.FK_FinancialAdvisor_inherits_Person">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PersonSet_FinancialAdvisor" EntitySet="PersonSet_FinancialAdvisor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FinancialAdvisorCustomer" Association="Model.Store.FK_FinancialAdvisorCustomer">
+      <End Role="PersonSet_FinancialAdvisor" EntitySet="PersonSet_FinancialAdvisor" />
+      <End Role="PersonSet_Customer" EntitySet="PersonSet_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FK_PortfolioContentsFinancialInstrument_AssetSet" Association="Model.Store.FK_FK_PortfolioContentsFinancialInstrument_AssetSet">
+      <End Role="AssetSet" EntitySet="AssetSet" />
+      <End Role="FK_PortfolioContentsFinancialInstrument" EntitySet="FK_PortfolioContentsFinancialInstrument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FK_PortfolioContentsFinancialInstrument_PortfolioContentSet" Association="Model.Store.FK_FK_PortfolioContentsFinancialInstrument_PortfolioContentSet">
+      <End Role="PortfolioContentSet" EntitySet="PortfolioContentSet" />
+      <End Role="FK_PortfolioContentsFinancialInstrument" EntitySet="FK_PortfolioContentsFinancialInstrument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruementSymbolInstruementPrice" Association="Model.Store.FK_InstruementSymbolInstruementPrice">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AssetPriceSet" EntitySet="AssetPriceSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruementSymbolInstruementPrice1" Association="Model.Store.FK_InstruementSymbolInstruementPrice1">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AssetPriceBackTestSet" EntitySet="AssetPriceBackTestSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruementSymbolPortfolioContent" Association="Model.Store.FK_InstruementSymbolPortfolioContent">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="PortfolioContentSet" EntitySet="PortfolioContentSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MostRecentRebalances_AssetSymbolSet" Association="Model.Store.FK_MostRecentRebalances_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="MostRecentRebalances" EntitySet="MostRecentRebalances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MostRecentRebalances_PortfolioSet" Association="Model.Store.FK_MostRecentRebalances_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="MostRecentRebalances" EntitySet="MostRecentRebalances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PasswordChallengePerson" Association="Model.Store.FK_PasswordChallengePerson">
+      <End Role="PasswordChallengeSet" EntitySet="PasswordChallengeSet" />
+      <End Role="PersonSet" EntitySet="PersonSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonAddress" Association="Model.Store.FK_PersonAddress">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="AddressSet1" EntitySet="AddressSet1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonPaymentInfo" Association="Model.Store.FK_PersonPaymentInfo">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PaymentInfoSet1" EntitySet="PaymentInfoSet1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonSet_UserLevels" Association="Model.Store.FK_PersonSet_UserLevels">
+      <End Role="UserLevels" EntitySet="UserLevels" />
+      <End Role="PersonSet" EntitySet="PersonSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PorfolioAllocationInfo_AssetSymbolSet" Association="Model.Store.FK_PorfolioAllocationInfo_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="PorfolioAllocationInfo" EntitySet="PorfolioAllocationInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PorfolioAllocationInfo_PortfolioSet" Association="Model.Store.FK_PorfolioAllocationInfo_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="PorfolioAllocationInfo" EntitySet="PorfolioAllocationInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioMethodSet_PortfolioSet" Association="Model.Store.FK_PortfolioMethodSet_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="PortfolioMethodSet" EntitySet="PortfolioMethodSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioPortfolioContents" Association="Model.Store.FK_PortfolioPortfolioContents">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="PortfolioContentSet" EntitySet="PortfolioContentSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioSet_PersonSet" Association="Model.Store.FK_PortfolioSet_PersonSet">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioValueSet_PortfolioSet" Association="Model.Store.FK_PortfolioValueSet_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="PortfolioValueSet" EntitySet="PortfolioValueSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RotationEnginePair_PortfolioSet" Association="Model.Store.FK_RotationEnginePair_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="RotationEnginePair" EntitySet="RotationEnginePair" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RotationMatrixData_PortfolioSet" Association="Model.Store.FK_RotationMatrixData_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="RotationMatrixData" EntitySet="RotationMatrixData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrendEngineVariablesFinancialInstrumentSet" Association="Model.Store.FK_TrendEngineVariablesFinancialInstrumentSet">
+      <End Role="TrendEngineVariablesSet" EntitySet="TrendEngineVariablesSet" />
+      <End Role="AssetSet" EntitySet="AssetSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrendEngineVariablesSet_LoopUpdateInterval" Association="Model.Store.FK_TrendEngineVariablesSet_LoopUpdateInterval">
+      <End Role="LoopUpdateInterval" EntitySet="LoopUpdateInterval" />
+      <End Role="TrendEngineVariablesSet" EntitySet="TrendEngineVariablesSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AddressSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="AddressLine1" Type="nvarchar(max)" />
+    <Property Name="AddressLine2" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="Zip" Type="nvarchar(max)" />
+    <Property Name="Phone1" Type="nvarchar(max)" />
+    <Property Name="Phone2" Type="nvarchar(max)" />
+    <Property Name="AddressName" Type="nvarchar(max)" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AlertSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="AlertStatus_Id" Type="int" Nullable="false" />
+    <Property Name="AlertType_Id" Type="int" Nullable="false" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AlertShare">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AssetSymbolID" Type="int" Nullable="false" />
+    <Property Name="Allocation Method" Type="nvarchar" MaxLength="50" />
+    <Property Name="NewShare" Type="float" />
+    <Property Name="OldShare" Type="float" />
+    <Property Name="RotationDate" Type="datetime" />
+    <Property Name="PortfolioID" Type="int" />
+  </EntityType>
+  <EntityType Name="AlertStatusSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Description" Type="int" />
+  </EntityType>
+  <EntityType Name="AlertSymbolState">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="State" Type="nvarchar" MaxLength="6" />
+    <Property Name="Symbol" Type="varchar(max)" />
+    <Property Name="AssetSymbol_Id" Type="int" />
+    <Property Name="StateColor" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AlertTypeSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Message" Type="int" />
+    <Property Name="Action" Type="int" />
+  </EntityType>
+  <EntityType Name="AllocationEngineVariablesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="SMArotatation" Type="decimal" />
+    <Property Name="ReturnCash" Type="int" />
+    <Property Name="WaitRotation" Type="int" />
+    <Property Name="Hysteresis" Type="int" />
+    <Property Name="BackStart" Type="datetime" />
+    <Property Name="BackEnd" Type="datetime" />
+    <Property Name="BeginDate" Type="datetime" />
+    <Property Name="Aggressiveness" Type="int" />
+    <Property Name="MinCash" Type="decimal" />
+    <Property Name="LoopThreshVal" Type="decimal" />
+    <Property Name="WeightRotation" Type="decimal" />
+    <Property Name="NomWeight" Type="decimal" />
+    <Property Name="TimeRebalance" Type="datetime" />
+    <Property Name="WeightBuyHold" Type="decimal" />
+    <Property Name="LoopValMin" Type="decimal" />
+    <Property Name="LoopValMax" Type="decimal" />
+    <Property Name="LoopValIncrement" Type="decimal" />
+    <Property Name="Portfolio_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetAssetPrice">
+    <Key>
+      <PropertyRef Name="Asset_Id" />
+      <PropertyRef Name="AssetPrice_Id" />
+    </Key>
+    <Property Name="Asset_Id" Type="int" Nullable="false" />
+    <Property Name="AssetPrice_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetBackTestSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Starting Date" Type="datetime" Nullable="false" />
+    <Property Name="Ending Date" Type="datetime" Nullable="false" />
+    <Property Name="Starting Price" Type="float" />
+    <Property Name="Ending Price" Type="float" />
+    <Property Name="AssetSymbol" Type="varchar(max)" />
+    <Property Name="EndingPriceTrend" Type="float" />
+    <Property Name="CAGR" Type="float" />
+    <Property Name="CAGRTrend" Type="float" />
+    <Property Name="Stdev" Type="float" />
+    <Property Name="StdevTrend" Type="float" />
+    <Property Name="Increase" Type="float" />
+    <Property Name="IncreaseTrend" Type="float" />
+    <Property Name="DrawDown" Type="float" />
+    <Property Name="DrawdownTrend" Type="float" />
+    <Property Name="CurrentState" Type="nvarchar" MaxLength="6" />
+    <Property Name="StateDate" Type="datetime" Nullable="false" />
+    <Property Name="MTBS" Type="float" />
+    <Property Name="INT" Type="float" />
+    <Property Name="Tbase" Type="float" />
+    <Property Name="DividentSplit" Type="int" />
+    <Property Name="AssetSymbol_Id" Type="int" Nullable="false" />
+    <Property Name="TrendEngineVariables_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetMonitoring">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Symbol" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonSetID" Type="int" />
+  </EntityType>
+  <EntityType Name="AssetPriceBackTestSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="decimal" Nullable="false" Precision="28" Scale="24" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="PriceTrend" Type="decimal" Scale="6" />
+    <Property Name="MeanDeviation" Type="decimal" Scale="6" />
+    <Property Name="Growth" Type="decimal" Scale="6" />
+    <Property Name="Threshold" Type="decimal" Scale="6" />
+    <Property Name="State" Type="nvarchar" MaxLength="6" />
+    <Property Name="AssetSymbol_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetPriceSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="decimal" Nullable="false" Precision="30" Scale="24" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="PriceTrend" Type="decimal" Scale="6" />
+    <Property Name="MeanDeviation" Type="decimal" Scale="6" />
+    <Property Name="Growth" Type="decimal" Scale="6" />
+    <Property Name="Threshold" Type="decimal" Scale="6" />
+    <Property Name="State" Type="nvarchar" MaxLength="6" />
+    <Property Name="FilterState" Type="nvarchar" MaxLength="6" />
+    <Property Name="AssetSymbol_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Starting Date" Type="datetime" Nullable="false" />
+    <Property Name="Ending Date" Type="datetime" Nullable="false" />
+    <Property Name="Starting Price" Type="float" />
+    <Property Name="Ending Price" Type="float" />
+    <Property Name="AssetSymbol" Type="varchar(max)" />
+    <Property Name="EndingPriceTrend" Type="float" />
+    <Property Name="CAGR" Type="float" />
+    <Property Name="CAGRTrend" Type="float" />
+    <Property Name="Stdev" Type="float" />
+    <Property Name="StdevTrend" Type="float" />
+    <Property Name="Increase" Type="float" />
+    <Property Name="IncreaseTrend" Type="float" />
+    <Property Name="DrawDown" Type="float" />
+    <Property Name="DrawdownTrend" Type="float" />
+    <Property Name="CurrentState" Type="nvarchar" MaxLength="6" />
+    <Property Name="StateDate" Type="datetime" Nullable="false" />
+    <Property Name="MTBS" Type="float" />
+    <Property Name="INT" Type="float" />
+    <Property Name="isWindowStable" Type="bit" />
+    <Property Name="Tbase" Type="float" />
+    <Property Name="DividentSplit" Type="int" />
+    <Property Name="AssetSymbol_Id" Type="int" Nullable="false" />
+    <Property Name="TrendEngineVariables_Id" Type="int" Nullable="false" />
+    <Property Name="StateColor" Type="varchar" MaxLength="10" />
+    <Property Name="M" Type="float" />
+    <Property Name="A" Type="float" />
+    <Property Name="LoopUpdateDate" Type="datetime" />
+    <Property Name="Sample Asset" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssetSymbolSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Symbol" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Exchange" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AutoCorrectPriceData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AssetSymbolID" Type="int" Nullable="false" />
+    <Property Name="DateOfBadPrice" Type="datetime" />
+    <Property Name="DateOfCorrectPrice" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DeletePortfolio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonSetId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="EndingDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ErrorAssets">
+    <Key>
+      <PropertyRef Name="AssetSymbolID" />
+    </Key>
+    <Property Name="AssetSymbolID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AssetSymbol" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FK_PortfolioContentsFinancialInstrument">
+    <Key>
+      <PropertyRef Name="Asset_Id" />
+      <PropertyRef Name="PortfolioContent_Id" />
+    </Key>
+    <Property Name="Asset_Id" Type="int" Nullable="false" />
+    <Property Name="PortfolioContent_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginDB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoopUpdateInterval">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Interval" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MembershipTypeSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Monthly Statistics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Total Users" Type="int" />
+    <Property Name="Level 1 Total Users" Type="int" />
+    <Property Name="Level 2 Total Users" Type="int" />
+    <Property Name="Level 3 Total Users" Type="int" />
+    <Property Name="Total Users Log On" Type="int" />
+    <Property Name="Total Assets" Type="int" />
+    <Property Name="Percentage of Red Assets" Type="float" />
+    <Property Name="Percentage of Assets TGPY gt GPY" Type="float" />
+    <Property Name="Percentage of Assets P12M TGPY gt GPY" Type="float" />
+    <Property Name="Total Portfolios" Type="int" />
+    <Property Name="Percentage of Portfolios GTREB gt or eq REB" Type="float" />
+    <Property Name="Percentage of Portfolios GRREB gt or eq TREB" Type="float" />
+    <Property Name="Percentage of Portfolios L12M GTREB gt or eq REB" Type="float" />
+    <Property Name="Percentage of Portfolios L12M GRREB gt or eq TREB" Type="float" />
+  </EntityType>
+  <EntityType Name="MostRecentRebalances">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AssetSymbolID" Type="int" Nullable="false" />
+    <Property Name="Allocation Method" Type="nvarchar" MaxLength="50" />
+    <Property Name="OldShare" Type="float" />
+    <Property Name="NewShare" Type="float" />
+    <Property Name="RebalanceDate" Type="datetime" />
+    <Property Name="PortfolioID" Type="int" />
+  </EntityType>
+  <EntityType Name="NewAssets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Symbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="Flag" Type="nvarchar" MaxLength="1" />
+    <Property Name="ErrorDescription" Type="nvarchar(max)" />
+    <Property Name="PersonSetId" Type="int" />
+  </EntityType>
+  <EntityType Name="PasswordChallengeSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="QuestionText" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PaymentInfoSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Lastname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nickname" Type="nvarchar(max)" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="QuestionId" Type="int" />
+    <Property Name="Answer" Type="nvarchar(max)" />
+    <Property Name="PasswordChallenge_Id" Type="int" />
+    <Property Name="UserLevel_Id" Type="int" Nullable="false" />
+    <Property Name="AlertsMessaging" Type="bit" />
+    <Property Name="BlockPortfolioCopy" Type="bit" Nullable="false" />
+    <Property Name="QuickViewPortfolio" Type="nvarchar" MaxLength="50" />
+    <Property Name="Total Logins" Type="int" Nullable="false" />
+    <Property Name="AlertsPortfolioMessaging" Type="bit" Nullable="false" />
+    <Property Name="SubscriptionId" Type="numeric" Nullable="false" Precision="30" />
+    <Property Name="SubscriptionStatus" Type="bit" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="FreeTrialStatus" Type="bit" Nullable="false" />
+    <Property Name="ComplementryAccountStatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonSet_Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="MembershipType_Id" Type="int" Nullable="false" />
+    <Property Name="FinancialAdvisor_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="PersonSet_FinancialAdvisor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Company" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PorfolioAllocationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Allocation Method" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Starting Value" Type="float" />
+    <Property Name="Current Value" Type="float" />
+    <Property Name="Current Weight" Type="float" />
+    <Property Name="Target Weight" Type="float" />
+    <Property Name="Share Price" Type="float" />
+    <Property Name="CurrentSharePrice" Type="float" />
+    <Property Name="SharePriceTrend" Type="float" />
+    <Property Name="CurrentShare" Type="float" />
+    <Property Name="TotalValue" Type="float" />
+    <Property Name="RotationDate" Type="datetime" />
+    <Property Name="PortfolioID" Type="int" />
+    <Property Name="AssetSymbolID" Type="int" />
+  </EntityType>
+  <EntityType Name="PortfolioContentSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Shares" Type="decimal" />
+    <Property Name="Udatedate" Type="datetime" />
+    <Property Name="Weighting" Type="int" />
+    <Property Name="Stedev" Type="int" />
+    <Property Name="Increase" Type="int" />
+    <Property Name="Drawdown" Type="int" />
+    <Property Name="Rebalance" Type="int" />
+    <Property Name="CAR" Type="int" />
+    <Property Name="MTBR" Type="int" />
+    <Property Name="Invested" Type="bit" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="DateStamp" Type="datetime" Nullable="false" />
+    <Property Name="Value" Type="decimal" />
+    <Property Name="AssetSymbol_Id" Type="int" Nullable="false" />
+    <Property Name="Portfolio_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PortfolioMethodSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Current Value BH" Type="float" />
+    <Property Name="Current Value BHTrend" Type="float" />
+    <Property Name="Current Value Reb" Type="float" />
+    <Property Name="Current Value RebTrend" Type="float" />
+    <Property Name="Current Value BHRotation" Type="float" />
+    <Property Name="Current Value RebRotation" Type="float" />
+    <Property Name="Current Value RankRebRotaion" Type="float" />
+    <Property Name="CAGR BH" Type="float" />
+    <Property Name="CAGR BHTrend" Type="float" />
+    <Property Name="CAGR Reb" Type="float" />
+    <Property Name="CAGR RebTrend" Type="float" />
+    <Property Name="CAGR BHRotation" Type="float" />
+    <Property Name="CAGR RebRotation" Type="float" />
+    <Property Name="CAGR RankRebRotation" Type="float" />
+    <Property Name="Increase BH" Type="float" />
+    <Property Name="Increase BHTrend" Type="float" />
+    <Property Name="Increase Reb" Type="float" />
+    <Property Name="Increase RebTrend" Type="float" />
+    <Property Name="Increase BHRotation" Type="float" />
+    <Property Name="Increase RebRotation" Type="float" />
+    <Property Name="Increase RankRebRotation" Type="float" />
+    <Property Name="DrawDown BH" Type="float" />
+    <Property Name="DrawDown BHTrend" Type="float" />
+    <Property Name="DrawDown Reb" Type="float" />
+    <Property Name="DrawDown RebTrend" Type="float" />
+    <Property Name="DrawDownBHRotation" Type="float" />
+    <Property Name="DrawDownRebRotation" Type="float" />
+    <Property Name="DrawDown RankRebRotation" Type="float" />
+    <Property Name="Stdev BH" Type="float" />
+    <Property Name="Stdev BHTrend" Type="float" />
+    <Property Name="Stdev Reb" Type="float" />
+    <Property Name="Stdev RebTrend" Type="float" />
+    <Property Name="Stdev BHRotation" Type="float" />
+    <Property Name="Stdev RebRotation" Type="float" />
+    <Property Name="Stdev RankRebRotation" Type="float" />
+    <Property Name="Rebalance Date" Type="datetime" />
+    <Property Name="RebalancesPerYearAvg" Type="float" />
+    <Property Name="MTBR" Type="float" />
+    <Property Name="Portfolio_Id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="PortfolioSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Portfolio Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Aggressiveness" Type="float" Nullable="false" />
+    <Property Name="BeginDate" Type="datetime" />
+    <Property Name="Current Date" Type="datetime" />
+    <Property Name="Begin Value" Type="float" />
+    <Property Name="PersonSetID" Type="int" />
+    <Property Name="IsProcessingCompleted" Type="nvarchar" MaxLength="1" />
+    <Property Name="Sample Portfolio" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PortfoliosInProgress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PortfolioID" Type="int" />
+  </EntityType>
+  <EntityType Name="PortfolioValueSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="BH" Type="float" />
+    <Property Name="REB" Type="float" />
+    <Property Name="TBH" Type="float" />
+    <Property Name="TREB" Type="float" />
+    <Property Name="RBH" Type="float" />
+    <Property Name="RREB" Type="float" />
+    <Property Name="RRR" Type="float" />
+    <Property Name="Portfolio_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RotationEnginePair">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SymbolPair" Type="nvarchar(max)" />
+    <Property Name="OptimalTbase" Type="float" Nullable="false" />
+    <Property Name="PortfollioID" Type="int" />
+  </EntityType>
+  <EntityType Name="RotationEngineVariableSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SMARotation" Type="int" />
+    <Property Name="WaitRotation" Type="int" />
+  </EntityType>
+  <EntityType Name="RotationMatrixData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="C1" Type="nvarchar" MaxLength="50" />
+    <Property Name="C2" Type="nvarchar" MaxLength="50" />
+    <Property Name="C3" Type="nvarchar" MaxLength="50" />
+    <Property Name="C4" Type="nvarchar" MaxLength="50" />
+    <Property Name="C5" Type="nvarchar" MaxLength="50" />
+    <Property Name="C6" Type="nvarchar" MaxLength="50" />
+    <Property Name="C7" Type="nvarchar" MaxLength="50" />
+    <Property Name="C8" Type="nvarchar" MaxLength="50" />
+    <Property Name="C9" Type="nvarchar" MaxLength="50" />
+    <Property Name="C10" Type="nvarchar" MaxLength="50" />
+    <Property Name="C11" Type="nvarchar" MaxLength="50" />
+    <Property Name="C12" Type="nvarchar" MaxLength="50" />
+    <Property Name="C13" Type="nvarchar" MaxLength="50" />
+    <Property Name="C14" Type="nvarchar" MaxLength="50" />
+    <Property Name="C15" Type="nvarchar" MaxLength="50" />
+    <Property Name="C16" Type="nvarchar" MaxLength="50" />
+    <Property Name="ColorC1" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC2" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC3" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC4" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC5" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC6" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC7" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC8" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC9" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC10" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC11" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC12" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC13" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC14" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC15" Type="nvarchar" MaxLength="10" />
+    <Property Name="ColorC16" Type="nvarchar" MaxLength="10" />
+    <Property Name="rowNo" Type="int" />
+    <Property Name="PortfolioID" Type="int" />
+  </EntityType>
+  <EntityType Name="SymbolLookup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Symbol" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TrendEngineVariablesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="SMATrend" Type="decimal" />
+    <Property Name="ReturnCash" Type="decimal" />
+    <Property Name="WaitTrend" Type="int" />
+    <Property Name="Hysteresis" Type="decimal" Scale="6" />
+    <Property Name="ThresholdMin" Type="decimal" Scale="6" />
+    <Property Name="ThresholdtMax" Type="decimal" Scale="6" />
+    <Property Name="ThresholdIncrement" Type="decimal" Scale="6" />
+    <Property Name="LoopValMin" Type="float" />
+    <Property Name="LoopValMax" Type="float" />
+    <Property Name="LoopValIncrement" Type="float" />
+    <Property Name="YearTradingDays" Type="int" />
+    <Property Name="BackStart" Type="datetime" />
+    <Property Name="BackEnd" Type="datetime" />
+    <Property Name="BeginDate" Type="datetime" />
+    <Property Name="LoopUpdateInterval" Type="int" Nullable="false" />
+    <Property Name="IsDynamicWaitTrend" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserLevels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserLevel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MaxMonitoredAssets" Type="int" Nullable="false" />
+    <Property Name="MaxMonitoredPortfolio" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AlertPerson">
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="1" />
+    <End Role="AlertSet" Type="Model.Store.AlertSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AlertSet">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertShare_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AlertShare" Type="Model.Store.AlertShare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AlertShare">
+        <PropertyRef Name="AssetSymbolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertShare_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="0..1" />
+    <End Role="AlertShare" Type="Model.Store.AlertShare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AlertShare">
+        <PropertyRef Name="PortfolioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertStatusAlert">
+    <End Role="AlertStatusSet1" Type="Model.Store.AlertStatusSet1" Multiplicity="1" />
+    <End Role="AlertSet" Type="Model.Store.AlertSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlertStatusSet1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AlertSet">
+        <PropertyRef Name="AlertStatus_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertSymbolState_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="0..1" />
+    <End Role="AlertSymbolState" Type="Model.Store.AlertSymbolState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AlertSymbolState">
+        <PropertyRef Name="AssetSymbol_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTypeAlert">
+    <End Role="AlertTypeSet1" Type="Model.Store.AlertTypeSet1" Multiplicity="1" />
+    <End Role="AlertSet" Type="Model.Store.AlertSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlertTypeSet1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AlertSet">
+        <PropertyRef Name="AlertType_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AllocationEngineVariablesPortfolio">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="1" />
+    <End Role="AllocationEngineVariablesSet" Type="Model.Store.AllocationEngineVariablesSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AllocationEngineVariablesSet">
+        <PropertyRef Name="Portfolio_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetAssetPrice_AssetPriceSet">
+    <End Role="AssetPriceSet" Type="Model.Store.AssetPriceSet" Multiplicity="1" />
+    <End Role="AssetAssetPrice" Type="Model.Store.AssetAssetPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetPriceSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetAssetPrice">
+        <PropertyRef Name="AssetPrice_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetAssetPrice_AssetSet">
+    <End Role="AssetSet" Type="Model.Store.AssetSet" Multiplicity="1" />
+    <End Role="AssetAssetPrice" Type="Model.Store.AssetAssetPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetAssetPrice">
+        <PropertyRef Name="Asset_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetBackTestSet_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AssetBackTestSet" Type="Model.Store.AssetBackTestSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetBackTestSet">
+        <PropertyRef Name="AssetSymbol_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetBackTestSet_TrendEngineVariablesSet">
+    <End Role="TrendEngineVariablesSet" Type="Model.Store.TrendEngineVariablesSet" Multiplicity="1" />
+    <End Role="AssetBackTestSet" Type="Model.Store.AssetBackTestSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrendEngineVariablesSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetBackTestSet">
+        <PropertyRef Name="TrendEngineVariables_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetMonitoring_PersonSet">
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="0..1" />
+    <End Role="AssetMonitoring" Type="Model.Store.AssetMonitoring" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetMonitoring">
+        <PropertyRef Name="PersonSetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssetSymbolAsset">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AssetSet" Type="Model.Store.AssetSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetSet">
+        <PropertyRef Name="AssetSymbol_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutoCorrectPriceData_AutoCorrectPriceData">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AutoCorrectPriceData" Type="Model.Store.AutoCorrectPriceData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AutoCorrectPriceData">
+        <PropertyRef Name="AssetSymbolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_inherits_Person">
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="1" />
+    <End Role="PersonSet_Customer" Type="Model.Store.PersonSet_Customer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet_Customer">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerMembershipType">
+    <End Role="MembershipTypeSet1" Type="Model.Store.MembershipTypeSet1" Multiplicity="1" />
+    <End Role="PersonSet_Customer" Type="Model.Store.PersonSet_Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MembershipTypeSet1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet_Customer">
+        <PropertyRef Name="MembershipType_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FinancialAdvisor_inherits_Person">
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="1" />
+    <End Role="PersonSet_FinancialAdvisor" Type="Model.Store.PersonSet_FinancialAdvisor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet_FinancialAdvisor">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FinancialAdvisorCustomer">
+    <End Role="PersonSet_FinancialAdvisor" Type="Model.Store.PersonSet_FinancialAdvisor" Multiplicity="0..1" />
+    <End Role="PersonSet_Customer" Type="Model.Store.PersonSet_Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet_FinancialAdvisor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet_Customer">
+        <PropertyRef Name="FinancialAdvisor_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FK_PortfolioContentsFinancialInstrument_AssetSet">
+    <End Role="AssetSet" Type="Model.Store.AssetSet" Multiplicity="1" />
+    <End Role="FK_PortfolioContentsFinancialInstrument" Type="Model.Store.FK_PortfolioContentsFinancialInstrument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FK_PortfolioContentsFinancialInstrument">
+        <PropertyRef Name="Asset_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FK_PortfolioContentsFinancialInstrument_PortfolioContentSet">
+    <End Role="PortfolioContentSet" Type="Model.Store.PortfolioContentSet" Multiplicity="1" />
+    <End Role="FK_PortfolioContentsFinancialInstrument" Type="Model.Store.FK_PortfolioContentsFinancialInstrument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioContentSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FK_PortfolioContentsFinancialInstrument">
+        <PropertyRef Name="PortfolioContent_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstruementSymbolInstruementPrice">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AssetPriceSet" Type="Model.Store.AssetPriceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetPriceSet">
+        <PropertyRef Name="AssetSymbol_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstruementSymbolInstruementPrice1">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AssetPriceBackTestSet" Type="Model.Store.AssetPriceBackTestSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetPriceBackTestSet">
+        <PropertyRef Name="AssetSymbol_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstruementSymbolPortfolioContent">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="1" />
+    <End Role="PortfolioContentSet" Type="Model.Store.PortfolioContentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PortfolioContentSet">
+        <PropertyRef Name="AssetSymbol_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MostRecentRebalances_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="1" />
+    <End Role="MostRecentRebalances" Type="Model.Store.MostRecentRebalances" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MostRecentRebalances">
+        <PropertyRef Name="AssetSymbolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MostRecentRebalances_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="0..1" />
+    <End Role="MostRecentRebalances" Type="Model.Store.MostRecentRebalances" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MostRecentRebalances">
+        <PropertyRef Name="PortfolioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PasswordChallengePerson">
+    <End Role="PasswordChallengeSet" Type="Model.Store.PasswordChallengeSet" Multiplicity="0..1" />
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PasswordChallengeSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet">
+        <PropertyRef Name="PasswordChallenge_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonAddress">
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="1" />
+    <End Role="AddressSet1" Type="Model.Store.AddressSet1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AddressSet1">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonPaymentInfo">
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="1" />
+    <End Role="PaymentInfoSet1" Type="Model.Store.PaymentInfoSet1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PaymentInfoSet1">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonSet_UserLevels">
+    <End Role="UserLevels" Type="Model.Store.UserLevels" Multiplicity="1" />
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserLevels">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PersonSet">
+        <PropertyRef Name="UserLevel_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PorfolioAllocationInfo_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.Store.AssetSymbolSet" Multiplicity="0..1" />
+    <End Role="PorfolioAllocationInfo" Type="Model.Store.PorfolioAllocationInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetSymbolSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PorfolioAllocationInfo">
+        <PropertyRef Name="AssetSymbolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PorfolioAllocationInfo_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="0..1" />
+    <End Role="PorfolioAllocationInfo" Type="Model.Store.PorfolioAllocationInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PorfolioAllocationInfo">
+        <PropertyRef Name="PortfolioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PortfolioMethodSet_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="1" />
+    <End Role="PortfolioMethodSet" Type="Model.Store.PortfolioMethodSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PortfolioMethodSet">
+        <PropertyRef Name="Portfolio_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PortfolioPortfolioContents">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="1" />
+    <End Role="PortfolioContentSet" Type="Model.Store.PortfolioContentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PortfolioContentSet">
+        <PropertyRef Name="Portfolio_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PortfolioSet_PersonSet">
+    <End Role="PersonSet" Type="Model.Store.PersonSet" Multiplicity="0..1" />
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PortfolioSet">
+        <PropertyRef Name="PersonSetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PortfolioValueSet_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="1" />
+    <End Role="PortfolioValueSet" Type="Model.Store.PortfolioValueSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PortfolioValueSet">
+        <PropertyRef Name="Portfolio_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RotationEnginePair_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="0..1" />
+    <End Role="RotationEnginePair" Type="Model.Store.RotationEnginePair" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RotationEnginePair">
+        <PropertyRef Name="PortfollioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RotationMatrixData_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.Store.PortfolioSet" Multiplicity="0..1" />
+    <End Role="RotationMatrixData" Type="Model.Store.RotationMatrixData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PortfolioSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RotationMatrixData">
+        <PropertyRef Name="PortfolioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrendEngineVariablesFinancialInstrumentSet">
+    <End Role="TrendEngineVariablesSet" Type="Model.Store.TrendEngineVariablesSet" Multiplicity="1" />
+    <End Role="AssetSet" Type="Model.Store.AssetSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrendEngineVariablesSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetSet">
+        <PropertyRef Name="TrendEngineVariables_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrendEngineVariablesSet_LoopUpdateInterval">
+    <End Role="LoopUpdateInterval" Type="Model.Store.LoopUpdateInterval" Multiplicity="1" />
+    <End Role="TrendEngineVariablesSet" Type="Model.Store.TrendEngineVariablesSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoopUpdateInterval">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TrendEngineVariablesSet">
+        <PropertyRef Name="LoopUpdateInterval" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ClearData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DeleteUserData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="FireShareAlerts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="FireSymAlerts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAssetSetDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PersonSetID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PortfolioCalculations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

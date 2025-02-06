@@ -1,0 +1,972 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="Harbor_EastEntities">
+    <EntitySet Name="AddressSet1" EntityType="Model.AddressSet1" />
+    <EntitySet Name="AlertSet" EntityType="Model.AlertSet" />
+    <EntitySet Name="AlertShare" EntityType="Model.AlertShare" />
+    <EntitySet Name="AlertStatusSet1" EntityType="Model.AlertStatusSet1" />
+    <EntitySet Name="AlertSymbolState" EntityType="Model.AlertSymbolState" />
+    <EntitySet Name="AlertTypeSet1" EntityType="Model.AlertTypeSet1" />
+    <EntitySet Name="AllocationEngineVariablesSet" EntityType="Model.AllocationEngineVariablesSet" />
+    <EntitySet Name="AssetBackTestSet" EntityType="Model.AssetBackTestSet" />
+    <EntitySet Name="AssetMonitoring" EntityType="Model.AssetMonitoring" />
+    <EntitySet Name="AssetPriceBackTestSet" EntityType="Model.AssetPriceBackTestSet" />
+    <EntitySet Name="AssetPriceSet" EntityType="Model.AssetPriceSet" />
+    <EntitySet Name="AssetSet" EntityType="Model.AssetSet" />
+    <EntitySet Name="AssetSymbolSet" EntityType="Model.AssetSymbolSet" />
+    <EntitySet Name="AutoCorrectPriceData" EntityType="Model.AutoCorrectPriceData" />
+    <EntitySet Name="DeletePortfolio" EntityType="Model.DeletePortfolio" />
+    <EntitySet Name="ErrorAssets" EntityType="Model.ErrorAssets" />
+    <EntitySet Name="LoginDB" EntityType="Model.LoginDB" />
+    <EntitySet Name="LoopUpdateInterval" EntityType="Model.LoopUpdateInterval" />
+    <EntitySet Name="MembershipTypeSet1" EntityType="Model.MembershipTypeSet1" />
+    <EntitySet Name="Monthly_Statistics" EntityType="Model.Monthly_Statistics" />
+    <EntitySet Name="MostRecentRebalances" EntityType="Model.MostRecentRebalances" />
+    <EntitySet Name="NewAssets" EntityType="Model.NewAssets" />
+    <EntitySet Name="PasswordChallengeSet" EntityType="Model.PasswordChallengeSet" />
+    <EntitySet Name="PaymentInfoSet1" EntityType="Model.PaymentInfoSet1" />
+    <EntitySet Name="PersonSet" EntityType="Model.PersonSet" />
+    <EntitySet Name="PersonSet_Customer" EntityType="Model.PersonSet_Customer" />
+    <EntitySet Name="PersonSet_FinancialAdvisor" EntityType="Model.PersonSet_FinancialAdvisor" />
+    <EntitySet Name="PorfolioAllocationInfo" EntityType="Model.PorfolioAllocationInfo" />
+    <EntitySet Name="PortfolioContentSet" EntityType="Model.PortfolioContentSet" />
+    <EntitySet Name="PortfolioMethodSet" EntityType="Model.PortfolioMethodSet" />
+    <EntitySet Name="PortfolioSet" EntityType="Model.PortfolioSet" />
+    <EntitySet Name="PortfoliosInProgress" EntityType="Model.PortfoliosInProgress" />
+    <EntitySet Name="PortfolioValueSet" EntityType="Model.PortfolioValueSet" />
+    <EntitySet Name="RotationEnginePair" EntityType="Model.RotationEnginePair" />
+    <EntitySet Name="RotationEngineVariableSet" EntityType="Model.RotationEngineVariableSet" />
+    <EntitySet Name="RotationMatrixData" EntityType="Model.RotationMatrixData" />
+    <EntitySet Name="SymbolLookup" EntityType="Model.SymbolLookup" />
+    <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagrams" />
+    <EntitySet Name="TrendEngineVariablesSet" EntityType="Model.TrendEngineVariablesSet" />
+    <EntitySet Name="UserLevels" EntityType="Model.UserLevels" />
+    <AssociationSet Name="FK_PersonAddress" Association="Model.FK_PersonAddress">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="AddressSet1" EntitySet="AddressSet1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertPerson" Association="Model.FK_AlertPerson">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="AlertSet" EntitySet="AlertSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertStatusAlert" Association="Model.FK_AlertStatusAlert">
+      <End Role="AlertStatusSet1" EntitySet="AlertStatusSet1" />
+      <End Role="AlertSet" EntitySet="AlertSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTypeAlert" Association="Model.FK_AlertTypeAlert">
+      <End Role="AlertTypeSet1" EntitySet="AlertTypeSet1" />
+      <End Role="AlertSet" EntitySet="AlertSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertShare_AssetSymbolSet" Association="Model.FK_AlertShare_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AlertShare" EntitySet="AlertShare" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertShare_PortfolioSet" Association="Model.FK_AlertShare_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="AlertShare" EntitySet="AlertShare" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertSymbolState_AssetSymbolSet" Association="Model.FK_AlertSymbolState_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AlertSymbolState" EntitySet="AlertSymbolState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AllocationEngineVariablesPortfolio" Association="Model.FK_AllocationEngineVariablesPortfolio">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="AllocationEngineVariablesSet" EntitySet="AllocationEngineVariablesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetBackTestSet_AssetSymbolSet" Association="Model.FK_AssetBackTestSet_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AssetBackTestSet" EntitySet="AssetBackTestSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetBackTestSet_TrendEngineVariablesSet" Association="Model.FK_AssetBackTestSet_TrendEngineVariablesSet">
+      <End Role="TrendEngineVariablesSet" EntitySet="TrendEngineVariablesSet" />
+      <End Role="AssetBackTestSet" EntitySet="AssetBackTestSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetMonitoring_PersonSet" Association="Model.FK_AssetMonitoring_PersonSet">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="AssetMonitoring" EntitySet="AssetMonitoring" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruementSymbolInstruementPrice1" Association="Model.FK_InstruementSymbolInstruementPrice1">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AssetPriceBackTestSet" EntitySet="AssetPriceBackTestSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruementSymbolInstruementPrice" Association="Model.FK_InstruementSymbolInstruementPrice">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AssetPriceSet" EntitySet="AssetPriceSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssetSymbolAsset" Association="Model.FK_AssetSymbolAsset">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AssetSet" EntitySet="AssetSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrendEngineVariablesFinancialInstrumentSet" Association="Model.FK_TrendEngineVariablesFinancialInstrumentSet">
+      <End Role="TrendEngineVariablesSet" EntitySet="TrendEngineVariablesSet" />
+      <End Role="AssetSet" EntitySet="AssetSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutoCorrectPriceData_AutoCorrectPriceData" Association="Model.FK_AutoCorrectPriceData_AutoCorrectPriceData">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="AutoCorrectPriceData" EntitySet="AutoCorrectPriceData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstruementSymbolPortfolioContent" Association="Model.FK_InstruementSymbolPortfolioContent">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="PortfolioContentSet" EntitySet="PortfolioContentSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MostRecentRebalances_AssetSymbolSet" Association="Model.FK_MostRecentRebalances_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="MostRecentRebalances" EntitySet="MostRecentRebalances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PorfolioAllocationInfo_AssetSymbolSet" Association="Model.FK_PorfolioAllocationInfo_AssetSymbolSet">
+      <End Role="AssetSymbolSet" EntitySet="AssetSymbolSet" />
+      <End Role="PorfolioAllocationInfo" EntitySet="PorfolioAllocationInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrendEngineVariablesSet_LoopUpdateInterval" Association="Model.FK_TrendEngineVariablesSet_LoopUpdateInterval">
+      <End Role="LoopUpdateInterval" EntitySet="LoopUpdateInterval" />
+      <End Role="TrendEngineVariablesSet" EntitySet="TrendEngineVariablesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerMembershipType" Association="Model.FK_CustomerMembershipType">
+      <End Role="MembershipTypeSet1" EntitySet="MembershipTypeSet1" />
+      <End Role="PersonSet_Customer" EntitySet="PersonSet_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MostRecentRebalances_PortfolioSet" Association="Model.FK_MostRecentRebalances_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="MostRecentRebalances" EntitySet="MostRecentRebalances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PasswordChallengePerson" Association="Model.FK_PasswordChallengePerson">
+      <End Role="PasswordChallengeSet" EntitySet="PasswordChallengeSet" />
+      <End Role="PersonSet" EntitySet="PersonSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonPaymentInfo" Association="Model.FK_PersonPaymentInfo">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PaymentInfoSet1" EntitySet="PaymentInfoSet1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_inherits_Person" Association="Model.FK_Customer_inherits_Person">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PersonSet_Customer" EntitySet="PersonSet_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FinancialAdvisor_inherits_Person" Association="Model.FK_FinancialAdvisor_inherits_Person">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PersonSet_FinancialAdvisor" EntitySet="PersonSet_FinancialAdvisor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonSet_UserLevels" Association="Model.FK_PersonSet_UserLevels">
+      <End Role="UserLevels" EntitySet="UserLevels" />
+      <End Role="PersonSet" EntitySet="PersonSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioSet_PersonSet" Association="Model.FK_PortfolioSet_PersonSet">
+      <End Role="PersonSet" EntitySet="PersonSet" />
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FinancialAdvisorCustomer" Association="Model.FK_FinancialAdvisorCustomer">
+      <End Role="PersonSet_FinancialAdvisor" EntitySet="PersonSet_FinancialAdvisor" />
+      <End Role="PersonSet_Customer" EntitySet="PersonSet_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PorfolioAllocationInfo_PortfolioSet" Association="Model.FK_PorfolioAllocationInfo_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="PorfolioAllocationInfo" EntitySet="PorfolioAllocationInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioPortfolioContents" Association="Model.FK_PortfolioPortfolioContents">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="PortfolioContentSet" EntitySet="PortfolioContentSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioMethodSet_PortfolioSet" Association="Model.FK_PortfolioMethodSet_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="PortfolioMethodSet" EntitySet="PortfolioMethodSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioValueSet_PortfolioSet" Association="Model.FK_PortfolioValueSet_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="PortfolioValueSet" EntitySet="PortfolioValueSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RotationEnginePair_PortfolioSet" Association="Model.FK_RotationEnginePair_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="RotationEnginePair" EntitySet="RotationEnginePair" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RotationMatrixData_PortfolioSet" Association="Model.FK_RotationMatrixData_PortfolioSet">
+      <End Role="PortfolioSet" EntitySet="PortfolioSet" />
+      <End Role="RotationMatrixData" EntitySet="RotationMatrixData" />
+    </AssociationSet>
+    <AssociationSet Name="AssetAssetPrice" Association="Model.AssetAssetPrice">
+      <End Role="AssetPriceSet" EntitySet="AssetPriceSet" />
+      <End Role="AssetSet" EntitySet="AssetSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PortfolioContentsFinancialInstrument" Association="Model.FK_PortfolioContentsFinancialInstrument">
+      <End Role="AssetSet" EntitySet="AssetSet" />
+      <End Role="PortfolioContentSet" EntitySet="PortfolioContentSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AddressSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Zip" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Phone1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Phone2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddressName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_PersonAddress" FromRole="AddressSet1" ToRole="PersonSet" />
+  </EntityType>
+  <EntityType Name="AlertSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_AlertPerson" FromRole="AlertSet" ToRole="PersonSet" />
+    <NavigationProperty Name="AlertStatusSet1" Relationship="Model.FK_AlertStatusAlert" FromRole="AlertSet" ToRole="AlertStatusSet1" />
+    <NavigationProperty Name="AlertTypeSet1" Relationship="Model.FK_AlertTypeAlert" FromRole="AlertSet" ToRole="AlertTypeSet1" />
+  </EntityType>
+  <EntityType Name="AlertShare">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Allocation_Method" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NewShare" Type="Double" />
+    <Property Name="OldShare" Type="Double" />
+    <Property Name="RotationDate" Type="DateTime" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_AlertShare_AssetSymbolSet" FromRole="AlertShare" ToRole="AssetSymbolSet" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_AlertShare_PortfolioSet" FromRole="AlertShare" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="AlertStatusSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="Int32" />
+    <NavigationProperty Name="AlertSet" Relationship="Model.FK_AlertStatusAlert" FromRole="AlertStatusSet1" ToRole="AlertSet" />
+  </EntityType>
+  <EntityType Name="AlertSymbolState">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="State" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="Symbol" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="StateColor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_AlertSymbolState_AssetSymbolSet" FromRole="AlertSymbolState" ToRole="AssetSymbolSet" />
+  </EntityType>
+  <EntityType Name="AlertTypeSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="Int32" />
+    <Property Name="Action" Type="Int32" />
+    <NavigationProperty Name="AlertSet" Relationship="Model.FK_AlertTypeAlert" FromRole="AlertTypeSet1" ToRole="AlertSet" />
+  </EntityType>
+  <EntityType Name="AllocationEngineVariablesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SMArotatation" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ReturnCash" Type="Int32" />
+    <Property Name="WaitRotation" Type="Int32" />
+    <Property Name="Hysteresis" Type="Int32" />
+    <Property Name="BackStart" Type="DateTime" />
+    <Property Name="BackEnd" Type="DateTime" />
+    <Property Name="BeginDate" Type="DateTime" />
+    <Property Name="Aggressiveness" Type="Int32" />
+    <Property Name="MinCash" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LoopThreshVal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WeightRotation" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="NomWeight" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TimeRebalance" Type="DateTime" />
+    <Property Name="WeightBuyHold" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LoopValMin" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LoopValMax" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LoopValIncrement" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_AllocationEngineVariablesPortfolio" FromRole="AllocationEngineVariablesSet" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="AssetBackTestSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Starting_Date" Type="DateTime" Nullable="false" />
+    <Property Name="Ending_Date" Type="DateTime" Nullable="false" />
+    <Property Name="Starting_Price" Type="Double" />
+    <Property Name="Ending_Price" Type="Double" />
+    <Property Name="AssetSymbol" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="EndingPriceTrend" Type="Double" />
+    <Property Name="CAGR" Type="Double" />
+    <Property Name="CAGRTrend" Type="Double" />
+    <Property Name="Stdev" Type="Double" />
+    <Property Name="StdevTrend" Type="Double" />
+    <Property Name="Increase" Type="Double" />
+    <Property Name="IncreaseTrend" Type="Double" />
+    <Property Name="DrawDown" Type="Double" />
+    <Property Name="DrawdownTrend" Type="Double" />
+    <Property Name="CurrentState" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="StateDate" Type="DateTime" Nullable="false" />
+    <Property Name="MTBS" Type="Double" />
+    <Property Name="INT" Type="Double" />
+    <Property Name="Tbase" Type="Double" />
+    <Property Name="DividentSplit" Type="Int32" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_AssetBackTestSet_AssetSymbolSet" FromRole="AssetBackTestSet" ToRole="AssetSymbolSet" />
+    <NavigationProperty Name="TrendEngineVariablesSet" Relationship="Model.FK_AssetBackTestSet_TrendEngineVariablesSet" FromRole="AssetBackTestSet" ToRole="TrendEngineVariablesSet" />
+  </EntityType>
+  <EntityType Name="AssetMonitoring">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Symbol" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_AssetMonitoring_PersonSet" FromRole="AssetMonitoring" ToRole="PersonSet" />
+  </EntityType>
+  <EntityType Name="AssetPriceBackTestSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="28" Scale="24" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="PriceTrend" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="MeanDeviation" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Growth" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Threshold" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="State" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_InstruementSymbolInstruementPrice1" FromRole="AssetPriceBackTestSet" ToRole="AssetSymbolSet" />
+  </EntityType>
+  <EntityType Name="AssetPriceSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="30" Scale="24" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="PriceTrend" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="MeanDeviation" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Growth" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Threshold" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="State" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="FilterState" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_InstruementSymbolInstruementPrice" FromRole="AssetPriceSet" ToRole="AssetSymbolSet" />
+    <NavigationProperty Name="AssetSet" Relationship="Model.AssetAssetPrice" FromRole="AssetPriceSet" ToRole="AssetSet" />
+  </EntityType>
+  <EntityType Name="AssetSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Starting_Date" Type="DateTime" Nullable="false" />
+    <Property Name="Ending_Date" Type="DateTime" Nullable="false" />
+    <Property Name="Starting_Price" Type="Double" />
+    <Property Name="Ending_Price" Type="Double" />
+    <Property Name="AssetSymbol" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="EndingPriceTrend" Type="Double" />
+    <Property Name="CAGR" Type="Double" />
+    <Property Name="CAGRTrend" Type="Double" />
+    <Property Name="Stdev" Type="Double" />
+    <Property Name="StdevTrend" Type="Double" />
+    <Property Name="Increase" Type="Double" />
+    <Property Name="IncreaseTrend" Type="Double" />
+    <Property Name="DrawDown" Type="Double" />
+    <Property Name="DrawdownTrend" Type="Double" />
+    <Property Name="CurrentState" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="StateDate" Type="DateTime" Nullable="false" />
+    <Property Name="MTBS" Type="Double" />
+    <Property Name="INT" Type="Double" />
+    <Property Name="isWindowStable" Type="Boolean" />
+    <Property Name="Tbase" Type="Double" />
+    <Property Name="DividentSplit" Type="Int32" />
+    <Property Name="StateColor" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="M" Type="Double" />
+    <Property Name="A" Type="Double" />
+    <Property Name="LoopUpdateDate" Type="DateTime" />
+    <Property Name="Sample_Asset" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_AssetSymbolAsset" FromRole="AssetSet" ToRole="AssetSymbolSet" />
+    <NavigationProperty Name="TrendEngineVariablesSet" Relationship="Model.FK_TrendEngineVariablesFinancialInstrumentSet" FromRole="AssetSet" ToRole="TrendEngineVariablesSet" />
+    <NavigationProperty Name="AssetPriceSet" Relationship="Model.AssetAssetPrice" FromRole="AssetSet" ToRole="AssetPriceSet" />
+    <NavigationProperty Name="PortfolioContentSet" Relationship="Model.FK_PortfolioContentsFinancialInstrument" FromRole="AssetSet" ToRole="PortfolioContentSet" />
+  </EntityType>
+  <EntityType Name="AssetSymbolSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Symbol" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Exchange" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AlertShare" Relationship="Model.FK_AlertShare_AssetSymbolSet" FromRole="AssetSymbolSet" ToRole="AlertShare" />
+    <NavigationProperty Name="AlertSymbolState" Relationship="Model.FK_AlertSymbolState_AssetSymbolSet" FromRole="AssetSymbolSet" ToRole="AlertSymbolState" />
+    <NavigationProperty Name="AssetBackTestSet" Relationship="Model.FK_AssetBackTestSet_AssetSymbolSet" FromRole="AssetSymbolSet" ToRole="AssetBackTestSet" />
+    <NavigationProperty Name="AssetPriceBackTestSet" Relationship="Model.FK_InstruementSymbolInstruementPrice1" FromRole="AssetSymbolSet" ToRole="AssetPriceBackTestSet" />
+    <NavigationProperty Name="AssetPriceSet" Relationship="Model.FK_InstruementSymbolInstruementPrice" FromRole="AssetSymbolSet" ToRole="AssetPriceSet" />
+    <NavigationProperty Name="AssetSet" Relationship="Model.FK_AssetSymbolAsset" FromRole="AssetSymbolSet" ToRole="AssetSet" />
+    <NavigationProperty Name="AutoCorrectPriceData" Relationship="Model.FK_AutoCorrectPriceData_AutoCorrectPriceData" FromRole="AssetSymbolSet" ToRole="AutoCorrectPriceData" />
+    <NavigationProperty Name="PortfolioContentSet" Relationship="Model.FK_InstruementSymbolPortfolioContent" FromRole="AssetSymbolSet" ToRole="PortfolioContentSet" />
+    <NavigationProperty Name="MostRecentRebalances" Relationship="Model.FK_MostRecentRebalances_AssetSymbolSet" FromRole="AssetSymbolSet" ToRole="MostRecentRebalances" />
+    <NavigationProperty Name="PorfolioAllocationInfo" Relationship="Model.FK_PorfolioAllocationInfo_AssetSymbolSet" FromRole="AssetSymbolSet" ToRole="PorfolioAllocationInfo" />
+  </EntityType>
+  <EntityType Name="AutoCorrectPriceData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DateOfBadPrice" Type="DateTime" />
+    <Property Name="DateOfCorrectPrice" Type="DateTime" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_AutoCorrectPriceData_AutoCorrectPriceData" FromRole="AutoCorrectPriceData" ToRole="AssetSymbolSet" />
+  </EntityType>
+  <EntityType Name="DeletePortfolio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="PersonSetId" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="EndingDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ErrorAssets">
+    <Key>
+      <PropertyRef Name="AssetSymbolID" />
+    </Key>
+    <Property Name="AssetSymbolID" Type="Int32" Nullable="false" />
+    <Property Name="AssetSymbol" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LoginDB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LoopUpdateInterval">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Interval" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TrendEngineVariablesSet" Relationship="Model.FK_TrendEngineVariablesSet_LoopUpdateInterval" FromRole="LoopUpdateInterval" ToRole="TrendEngineVariablesSet" />
+  </EntityType>
+  <EntityType Name="MembershipTypeSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PersonSet_Customer" Relationship="Model.FK_CustomerMembershipType" FromRole="MembershipTypeSet1" ToRole="PersonSet_Customer" />
+  </EntityType>
+  <EntityType Name="Monthly_Statistics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Total_Users" Type="Int32" />
+    <Property Name="Level_1_Total_Users" Type="Int32" />
+    <Property Name="Level_2_Total_Users" Type="Int32" />
+    <Property Name="Level_3_Total_Users" Type="Int32" />
+    <Property Name="Total_Users_Log_On" Type="Int32" />
+    <Property Name="Total_Assets" Type="Int32" />
+    <Property Name="Percentage_of_Red_Assets" Type="Double" />
+    <Property Name="Percentage_of_Assets_TGPY_gt_GPY" Type="Double" />
+    <Property Name="Percentage_of_Assets_P12M_TGPY_gt_GPY" Type="Double" />
+    <Property Name="Total_Portfolios" Type="Int32" />
+    <Property Name="Percentage_of_Portfolios_GTREB_gt_or_eq_REB" Type="Double" />
+    <Property Name="Percentage_of_Portfolios_GRREB_gt_or_eq_TREB" Type="Double" />
+    <Property Name="Percentage_of_Portfolios_L12M_GTREB_gt_or_eq_REB" Type="Double" />
+    <Property Name="Percentage_of_Portfolios_L12M_GRREB_gt_or_eq_TREB" Type="Double" />
+  </EntityType>
+  <EntityType Name="MostRecentRebalances">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Allocation_Method" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="OldShare" Type="Double" />
+    <Property Name="NewShare" Type="Double" />
+    <Property Name="RebalanceDate" Type="DateTime" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_MostRecentRebalances_AssetSymbolSet" FromRole="MostRecentRebalances" ToRole="AssetSymbolSet" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_MostRecentRebalances_PortfolioSet" FromRole="MostRecentRebalances" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="NewAssets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Symbol" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Flag" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="ErrorDescription" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PersonSetId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PasswordChallengeSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="QuestionText" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_PasswordChallengePerson" FromRole="PasswordChallengeSet" ToRole="PersonSet" />
+  </EntityType>
+  <EntityType Name="PaymentInfoSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_PersonPaymentInfo" FromRole="PaymentInfoSet1" ToRole="PersonSet" />
+  </EntityType>
+  <EntityType Name="PersonSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Lastname" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Firstname" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LoginName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Nickname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="QuestionId" Type="Int32" />
+    <Property Name="Answer" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AlertsMessaging" Type="Boolean" />
+    <Property Name="BlockPortfolioCopy" Type="Boolean" Nullable="false" />
+    <Property Name="QuickViewPortfolio" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Total_Logins" Type="Int32" Nullable="false" />
+    <Property Name="AlertsPortfolioMessaging" Type="Boolean" Nullable="false" />
+    <Property Name="SubscriptionId" Type="Decimal" Nullable="false" Precision="30" Scale="0" />
+    <Property Name="SubscriptionStatus" Type="Boolean" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="FreeTrialStatus" Type="Boolean" Nullable="false" />
+    <Property Name="ComplementryAccountStatus" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AddressSet1" Relationship="Model.FK_PersonAddress" FromRole="PersonSet" ToRole="AddressSet1" />
+    <NavigationProperty Name="AlertSet" Relationship="Model.FK_AlertPerson" FromRole="PersonSet" ToRole="AlertSet" />
+    <NavigationProperty Name="AssetMonitoring" Relationship="Model.FK_AssetMonitoring_PersonSet" FromRole="PersonSet" ToRole="AssetMonitoring" />
+    <NavigationProperty Name="PasswordChallengeSet" Relationship="Model.FK_PasswordChallengePerson" FromRole="PersonSet" ToRole="PasswordChallengeSet" />
+    <NavigationProperty Name="PaymentInfoSet1" Relationship="Model.FK_PersonPaymentInfo" FromRole="PersonSet" ToRole="PaymentInfoSet1" />
+    <NavigationProperty Name="PersonSet_Customer" Relationship="Model.FK_Customer_inherits_Person" FromRole="PersonSet" ToRole="PersonSet_Customer" />
+    <NavigationProperty Name="PersonSet_FinancialAdvisor" Relationship="Model.FK_FinancialAdvisor_inherits_Person" FromRole="PersonSet" ToRole="PersonSet_FinancialAdvisor" />
+    <NavigationProperty Name="UserLevels" Relationship="Model.FK_PersonSet_UserLevels" FromRole="PersonSet" ToRole="UserLevels" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_PortfolioSet_PersonSet" FromRole="PersonSet" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="PersonSet_Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MembershipTypeSet1" Relationship="Model.FK_CustomerMembershipType" FromRole="PersonSet_Customer" ToRole="MembershipTypeSet1" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_Customer_inherits_Person" FromRole="PersonSet_Customer" ToRole="PersonSet" />
+    <NavigationProperty Name="PersonSet_FinancialAdvisor" Relationship="Model.FK_FinancialAdvisorCustomer" FromRole="PersonSet_Customer" ToRole="PersonSet_FinancialAdvisor" />
+  </EntityType>
+  <EntityType Name="PersonSet_FinancialAdvisor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Company" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_FinancialAdvisor_inherits_Person" FromRole="PersonSet_FinancialAdvisor" ToRole="PersonSet" />
+    <NavigationProperty Name="PersonSet_Customer" Relationship="Model.FK_FinancialAdvisorCustomer" FromRole="PersonSet_FinancialAdvisor" ToRole="PersonSet_Customer" />
+  </EntityType>
+  <EntityType Name="PorfolioAllocationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Allocation_Method" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Starting_Value" Type="Double" />
+    <Property Name="Current_Value" Type="Double" />
+    <Property Name="Current_Weight" Type="Double" />
+    <Property Name="Target_Weight" Type="Double" />
+    <Property Name="Share_Price" Type="Double" />
+    <Property Name="CurrentSharePrice" Type="Double" />
+    <Property Name="SharePriceTrend" Type="Double" />
+    <Property Name="CurrentShare" Type="Double" />
+    <Property Name="TotalValue" Type="Double" />
+    <Property Name="RotationDate" Type="DateTime" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_PorfolioAllocationInfo_AssetSymbolSet" FromRole="PorfolioAllocationInfo" ToRole="AssetSymbolSet" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_PorfolioAllocationInfo_PortfolioSet" FromRole="PorfolioAllocationInfo" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="PortfolioContentSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Shares" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Udatedate" Type="DateTime" />
+    <Property Name="Weighting" Type="Int32" />
+    <Property Name="Stedev" Type="Int32" />
+    <Property Name="Increase" Type="Int32" />
+    <Property Name="Drawdown" Type="Int32" />
+    <Property Name="Rebalance" Type="Int32" />
+    <Property Name="CAR" Type="Int32" />
+    <Property Name="MTBR" Type="Int32" />
+    <Property Name="Invested" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="DateStamp" Type="DateTime" Nullable="false" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="AssetSymbolSet" Relationship="Model.FK_InstruementSymbolPortfolioContent" FromRole="PortfolioContentSet" ToRole="AssetSymbolSet" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_PortfolioPortfolioContents" FromRole="PortfolioContentSet" ToRole="PortfolioSet" />
+    <NavigationProperty Name="AssetSet" Relationship="Model.FK_PortfolioContentsFinancialInstrument" FromRole="PortfolioContentSet" ToRole="AssetSet" />
+  </EntityType>
+  <EntityType Name="PortfolioMethodSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Current_Value_BH" Type="Double" />
+    <Property Name="Current_Value_BHTrend" Type="Double" />
+    <Property Name="Current_Value_Reb" Type="Double" />
+    <Property Name="Current_Value_RebTrend" Type="Double" />
+    <Property Name="Current_Value_BHRotation" Type="Double" />
+    <Property Name="Current_Value_RebRotation" Type="Double" />
+    <Property Name="Current_Value_RankRebRotaion" Type="Double" />
+    <Property Name="CAGR_BH" Type="Double" />
+    <Property Name="CAGR_BHTrend" Type="Double" />
+    <Property Name="CAGR_Reb" Type="Double" />
+    <Property Name="CAGR_RebTrend" Type="Double" />
+    <Property Name="CAGR_BHRotation" Type="Double" />
+    <Property Name="CAGR_RebRotation" Type="Double" />
+    <Property Name="CAGR_RankRebRotation" Type="Double" />
+    <Property Name="Increase_BH" Type="Double" />
+    <Property Name="Increase_BHTrend" Type="Double" />
+    <Property Name="Increase_Reb" Type="Double" />
+    <Property Name="Increase_RebTrend" Type="Double" />
+    <Property Name="Increase_BHRotation" Type="Double" />
+    <Property Name="Increase_RebRotation" Type="Double" />
+    <Property Name="Increase_RankRebRotation" Type="Double" />
+    <Property Name="DrawDown_BH" Type="Double" />
+    <Property Name="DrawDown_BHTrend" Type="Double" />
+    <Property Name="DrawDown_Reb" Type="Double" />
+    <Property Name="DrawDown_RebTrend" Type="Double" />
+    <Property Name="DrawDownBHRotation" Type="Double" />
+    <Property Name="DrawDownRebRotation" Type="Double" />
+    <Property Name="DrawDown_RankRebRotation" Type="Double" />
+    <Property Name="Stdev_BH" Type="Double" />
+    <Property Name="Stdev_BHTrend" Type="Double" />
+    <Property Name="Stdev_Reb" Type="Double" />
+    <Property Name="Stdev_RebTrend" Type="Double" />
+    <Property Name="Stdev_BHRotation" Type="Double" />
+    <Property Name="Stdev_RebRotation" Type="Double" />
+    <Property Name="Stdev_RankRebRotation" Type="Double" />
+    <Property Name="Rebalance_Date" Type="DateTime" />
+    <Property Name="RebalancesPerYearAvg" Type="Double" />
+    <Property Name="MTBR" Type="Double" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_PortfolioMethodSet_PortfolioSet" FromRole="PortfolioMethodSet" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="PortfolioSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Portfolio_Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Aggressiveness" Type="Double" Nullable="false" />
+    <Property Name="BeginDate" Type="DateTime" />
+    <Property Name="Current_Date" Type="DateTime" />
+    <Property Name="Begin_Value" Type="Double" />
+    <Property Name="IsProcessingCompleted" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="Sample_Portfolio" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AlertShare" Relationship="Model.FK_AlertShare_PortfolioSet" FromRole="PortfolioSet" ToRole="AlertShare" />
+    <NavigationProperty Name="AllocationEngineVariablesSet" Relationship="Model.FK_AllocationEngineVariablesPortfolio" FromRole="PortfolioSet" ToRole="AllocationEngineVariablesSet" />
+    <NavigationProperty Name="MostRecentRebalances" Relationship="Model.FK_MostRecentRebalances_PortfolioSet" FromRole="PortfolioSet" ToRole="MostRecentRebalances" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_PortfolioSet_PersonSet" FromRole="PortfolioSet" ToRole="PersonSet" />
+    <NavigationProperty Name="PorfolioAllocationInfo" Relationship="Model.FK_PorfolioAllocationInfo_PortfolioSet" FromRole="PortfolioSet" ToRole="PorfolioAllocationInfo" />
+    <NavigationProperty Name="PortfolioContentSet" Relationship="Model.FK_PortfolioPortfolioContents" FromRole="PortfolioSet" ToRole="PortfolioContentSet" />
+    <NavigationProperty Name="PortfolioMethodSet" Relationship="Model.FK_PortfolioMethodSet_PortfolioSet" FromRole="PortfolioSet" ToRole="PortfolioMethodSet" />
+    <NavigationProperty Name="PortfolioValueSet" Relationship="Model.FK_PortfolioValueSet_PortfolioSet" FromRole="PortfolioSet" ToRole="PortfolioValueSet" />
+    <NavigationProperty Name="RotationEnginePair" Relationship="Model.FK_RotationEnginePair_PortfolioSet" FromRole="PortfolioSet" ToRole="RotationEnginePair" />
+    <NavigationProperty Name="RotationMatrixData" Relationship="Model.FK_RotationMatrixData_PortfolioSet" FromRole="PortfolioSet" ToRole="RotationMatrixData" />
+  </EntityType>
+  <EntityType Name="PortfoliosInProgress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="PortfolioID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PortfolioValueSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="BH" Type="Double" />
+    <Property Name="REB" Type="Double" />
+    <Property Name="TBH" Type="Double" />
+    <Property Name="TREB" Type="Double" />
+    <Property Name="RBH" Type="Double" />
+    <Property Name="RREB" Type="Double" />
+    <Property Name="RRR" Type="Double" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_PortfolioValueSet_PortfolioSet" FromRole="PortfolioValueSet" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="RotationEnginePair">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="SymbolPair" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="OptimalTbase" Type="Double" Nullable="false" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_RotationEnginePair_PortfolioSet" FromRole="RotationEnginePair" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="RotationEngineVariableSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="SMARotation" Type="Int32" />
+    <Property Name="WaitRotation" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RotationMatrixData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="C1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C6" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C7" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C8" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C9" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C10" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C11" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C12" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C13" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C14" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C15" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="C16" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC1" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC2" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC3" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC4" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC5" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC6" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC7" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC8" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC9" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC10" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC11" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC12" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC13" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC14" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC15" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ColorC16" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="rowNo" Type="Int32" />
+    <NavigationProperty Name="PortfolioSet" Relationship="Model.FK_RotationMatrixData_PortfolioSet" FromRole="RotationMatrixData" ToRole="PortfolioSet" />
+  </EntityType>
+  <EntityType Name="SymbolLookup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Symbol" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TrendEngineVariablesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SMATrend" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ReturnCash" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WaitTrend" Type="Int32" />
+    <Property Name="Hysteresis" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="ThresholdMin" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="ThresholdtMax" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="ThresholdIncrement" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="LoopValMin" Type="Double" />
+    <Property Name="LoopValMax" Type="Double" />
+    <Property Name="LoopValIncrement" Type="Double" />
+    <Property Name="YearTradingDays" Type="Int32" />
+    <Property Name="BackStart" Type="DateTime" />
+    <Property Name="BackEnd" Type="DateTime" />
+    <Property Name="BeginDate" Type="DateTime" />
+    <Property Name="IsDynamicWaitTrend" Type="Boolean" />
+    <NavigationProperty Name="AssetBackTestSet" Relationship="Model.FK_AssetBackTestSet_TrendEngineVariablesSet" FromRole="TrendEngineVariablesSet" ToRole="AssetBackTestSet" />
+    <NavigationProperty Name="AssetSet" Relationship="Model.FK_TrendEngineVariablesFinancialInstrumentSet" FromRole="TrendEngineVariablesSet" ToRole="AssetSet" />
+    <NavigationProperty Name="LoopUpdateInterval" Relationship="Model.FK_TrendEngineVariablesSet_LoopUpdateInterval" FromRole="TrendEngineVariablesSet" ToRole="LoopUpdateInterval" />
+  </EntityType>
+  <EntityType Name="UserLevels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserLevel" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="MaxMonitoredAssets" Type="Int32" Nullable="false" />
+    <Property Name="MaxMonitoredPortfolio" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="PersonSet" Relationship="Model.FK_PersonSet_UserLevels" FromRole="UserLevels" ToRole="PersonSet" />
+  </EntityType>
+  <Association Name="FK_PersonAddress">
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="1" />
+    <End Role="AddressSet1" Type="Model.AddressSet1" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AlertPerson">
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="1" />
+    <End Role="AlertSet" Type="Model.AlertSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AlertStatusAlert">
+    <End Role="AlertStatusSet1" Type="Model.AlertStatusSet1" Multiplicity="1" />
+    <End Role="AlertSet" Type="Model.AlertSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AlertTypeAlert">
+    <End Role="AlertTypeSet1" Type="Model.AlertTypeSet1" Multiplicity="1" />
+    <End Role="AlertSet" Type="Model.AlertSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AlertShare_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AlertShare" Type="Model.AlertShare" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AlertShare_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="0..1" />
+    <End Role="AlertShare" Type="Model.AlertShare" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AlertSymbolState_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="0..1" />
+    <End Role="AlertSymbolState" Type="Model.AlertSymbolState" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AllocationEngineVariablesPortfolio">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="1" />
+    <End Role="AllocationEngineVariablesSet" Type="Model.AllocationEngineVariablesSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AssetBackTestSet_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AssetBackTestSet" Type="Model.AssetBackTestSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AssetBackTestSet_TrendEngineVariablesSet">
+    <End Role="TrendEngineVariablesSet" Type="Model.TrendEngineVariablesSet" Multiplicity="1" />
+    <End Role="AssetBackTestSet" Type="Model.AssetBackTestSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AssetMonitoring_PersonSet">
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="0..1" />
+    <End Role="AssetMonitoring" Type="Model.AssetMonitoring" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_InstruementSymbolInstruementPrice1">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AssetPriceBackTestSet" Type="Model.AssetPriceBackTestSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_InstruementSymbolInstruementPrice">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AssetPriceSet" Type="Model.AssetPriceSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AssetSymbolAsset">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AssetSet" Type="Model.AssetSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_TrendEngineVariablesFinancialInstrumentSet">
+    <End Role="TrendEngineVariablesSet" Type="Model.TrendEngineVariablesSet" Multiplicity="1" />
+    <End Role="AssetSet" Type="Model.AssetSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_AutoCorrectPriceData_AutoCorrectPriceData">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="1" />
+    <End Role="AutoCorrectPriceData" Type="Model.AutoCorrectPriceData" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_InstruementSymbolPortfolioContent">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="1" />
+    <End Role="PortfolioContentSet" Type="Model.PortfolioContentSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_MostRecentRebalances_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="1" />
+    <End Role="MostRecentRebalances" Type="Model.MostRecentRebalances" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PorfolioAllocationInfo_AssetSymbolSet">
+    <End Role="AssetSymbolSet" Type="Model.AssetSymbolSet" Multiplicity="0..1" />
+    <End Role="PorfolioAllocationInfo" Type="Model.PorfolioAllocationInfo" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_TrendEngineVariablesSet_LoopUpdateInterval">
+    <End Role="LoopUpdateInterval" Type="Model.LoopUpdateInterval" Multiplicity="1" />
+    <End Role="TrendEngineVariablesSet" Type="Model.TrendEngineVariablesSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_CustomerMembershipType">
+    <End Role="MembershipTypeSet1" Type="Model.MembershipTypeSet1" Multiplicity="1" />
+    <End Role="PersonSet_Customer" Type="Model.PersonSet_Customer" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_MostRecentRebalances_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="0..1" />
+    <End Role="MostRecentRebalances" Type="Model.MostRecentRebalances" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PasswordChallengePerson">
+    <End Role="PasswordChallengeSet" Type="Model.PasswordChallengeSet" Multiplicity="0..1" />
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PersonPaymentInfo">
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="1" />
+    <End Role="PaymentInfoSet1" Type="Model.PaymentInfoSet1" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Customer_inherits_Person">
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="1" />
+    <End Role="PersonSet_Customer" Type="Model.PersonSet_Customer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet_Customer">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FinancialAdvisor_inherits_Person">
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="1" />
+    <End Role="PersonSet_FinancialAdvisor" Type="Model.PersonSet_FinancialAdvisor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PersonSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonSet_FinancialAdvisor">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonSet_UserLevels">
+    <End Role="UserLevels" Type="Model.UserLevels" Multiplicity="1" />
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PortfolioSet_PersonSet">
+    <End Role="PersonSet" Type="Model.PersonSet" Multiplicity="0..1" />
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_FinancialAdvisorCustomer">
+    <End Role="PersonSet_FinancialAdvisor" Type="Model.PersonSet_FinancialAdvisor" Multiplicity="0..1" />
+    <End Role="PersonSet_Customer" Type="Model.PersonSet_Customer" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PorfolioAllocationInfo_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="0..1" />
+    <End Role="PorfolioAllocationInfo" Type="Model.PorfolioAllocationInfo" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PortfolioPortfolioContents">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="1" />
+    <End Role="PortfolioContentSet" Type="Model.PortfolioContentSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PortfolioMethodSet_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="1" />
+    <End Role="PortfolioMethodSet" Type="Model.PortfolioMethodSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PortfolioValueSet_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="1" />
+    <End Role="PortfolioValueSet" Type="Model.PortfolioValueSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_RotationEnginePair_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="0..1" />
+    <End Role="RotationEnginePair" Type="Model.RotationEnginePair" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_RotationMatrixData_PortfolioSet">
+    <End Role="PortfolioSet" Type="Model.PortfolioSet" Multiplicity="0..1" />
+    <End Role="RotationMatrixData" Type="Model.RotationMatrixData" Multiplicity="*" />
+  </Association>
+  <Association Name="AssetAssetPrice">
+    <End Role="AssetPriceSet" Type="Model.AssetPriceSet" Multiplicity="*" />
+    <End Role="AssetSet" Type="Model.AssetSet" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PortfolioContentsFinancialInstrument">
+    <End Role="AssetSet" Type="Model.AssetSet" Multiplicity="*" />
+    <End Role="PortfolioContentSet" Type="Model.PortfolioContentSet" Multiplicity="*" />
+  </Association>
+</Schema>

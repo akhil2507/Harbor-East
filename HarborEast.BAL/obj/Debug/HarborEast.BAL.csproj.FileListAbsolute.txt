@@ -1,0 +1,10 @@
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\bin\Debug\HarborEast.BAL.dll.config
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\bin\Debug\HarborEast.BAL.dll
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\bin\Debug\HarborEast.BAL.pdb
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\bin\Debug\Ionic.Zip.dll
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\bin\Debug\log4net.dll
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\bin\Debug\NPOI.dll
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\bin\Debug\log4net.xml
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\obj\Debug\HarborEast.BAL.dll
+C:\Users\akhileshk\Desktop\HarborEast(TFS_new)\TestApplication\HarborEast.BAL\obj\Debug\HarborEast.BAL.pdb
